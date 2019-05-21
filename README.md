@@ -1,3 +1,4 @@
 # Flyee
 Flyee Website
-Personal project
+This is a website for a company my group has made.
+For Educational Use Only.
