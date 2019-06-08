@@ -173,12 +173,3 @@ nav {
 	font-weight: 400;
 	color:var(--font-color);
 }
-
-#box {
-	margin-left:auto;
-	margin-right:auto;
-	background-color:#E7E9EA;
-	-webkit-box-shadow:5px 5px 5px #1e1e1e, -5px 5px 5px #1e1e1e;
-	width:80%;
-	height:100%
-}
