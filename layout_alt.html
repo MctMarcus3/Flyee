@@ -16,7 +16,7 @@
 		<div class="content">
 			<nav role="navigation">
 				<div id="menuToggle">
-				<input type="checkbox" id="menuButton" onclick="menuchecked()" />
+				<input type="checkbox" id="menuButton" onclick="menuChecked()" />
 				<span></span>
 				<span></span>
 				<span></span>
@@ -26,27 +26,29 @@
 					<li><a class="navButton" href="#">Reviews</a></li>
 					<li><a class="navButton" href="#">Package Pricing</a></li>
 					<li><a class="navButton" href="#">Feedback Us</a></li>
+					<li><div class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+					<input type="checkbox" id="themebox" />
+					<div class="slider round"></div>
+					</label>
+					<label class="navButton" for="themebox">Enable Light Mode!</em>
+					</div>
+					</li>
 				</ul>
-				</div>
+				
 			</nav>
-		</div>
 	<div id="content">
+	</div>
+				
 	<!-- Place your content here ↓-->
 
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
 	
-	<div class="theme-switch-wrap">
-		<label class="theme-switch" for="themecheckbox">
-		<input type="checkbox" id="themecheckbox" />
-		<div class="slider round"></div>
-		</label>
-		<em>Enable Light Mode!</em>
-	</div>
-	
 	</body>
   	<script>
-	function menuchecked(){
+	<!-- Menu Check	 -->
+	function menuChecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
 		if(checkbox.checked == true){
@@ -55,6 +57,7 @@
 			content.style.display = "block";
 		}
 	}	
+	<!-- Media check -->
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
 	document.getElementById("menuButton").checked = true;
@@ -69,5 +72,19 @@
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
 	
+	<!-- Theme switcher -->
+	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+	function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+		
 </script>
 </html>
