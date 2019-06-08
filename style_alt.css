@@ -1,17 +1,17 @@
 :root{
-	--primary-color: #304790; 
-    --secondary-color: #1D2B56; 
-    --font-color: #ACB5D3; 
-    --bg-color: #0E152B; 
-    --heading-color: #6E7EB1; 
+	--primary-color: #C9C9C9; 
+    --secondary-color: #A9A9A9; 
+    --font-color: #696969; 
+    --bg-color: #121212; 
+    --heading-color: #EAEAEA; 
 }
 
 [data-theme="dark"]{
-    --primary-color: #ADD8F6;
-    --secondary-color: #DEEFFB;
-    --font-color: #688294;
-    --bg-color: #F7FBFE;
-    --heading-color: #9CC2DD;
+    --primary-color: #616161;
+    --secondary-color: #818181;
+    --font-color: #C2C2C2;
+    --bg-color: #F5F5F5;
+    --heading-color: #414141;
 }
 
 /* Large devices (laptops/desktops, 914px and up) */
@@ -73,7 +73,7 @@
 	
 	.navButton {
 	text-decoration: none;
-	color:var(--font-color);
+	color:var(--primary-color);
 	opacity:1;
 	font-family: 'work sans', sans serif;
 	font-size: 1.5em;
@@ -118,7 +118,7 @@
 	height: 2px;
 	margin-bottom: 5px;
 	position: relative;
-	background: #ffffff;
+	background: var(--primary-color);
 	border-radius: 3px;
 	z-index: 1;
 	transform-origin: 5px 0px;
@@ -138,7 +138,7 @@
 	#menuToggle input:checked ~ span{
 	opacity: 1;
 	transform: rotate(45deg) translate(-3px, -1px);
-	background: #36383F;
+	background: var(--primary-color);
 	}
 	#menuToggle input:checked ~ span:nth-last-child(3){
 	opacity: 0;
@@ -239,7 +239,7 @@ input:checked + .slider:before {
 }
 
 nav {
-	background-color: var(--secondary-color);
+	background-color: var(--font-color);
 	height: 65px;
 	width:100%;
 }
