@@ -1,3 +1,18 @@
+[data-theme="light"]{
+	--primary-color: #304790; 
+    --secondary-color: #1D2B56; 
+    --font-color: #ACB5D3; 
+    --bg-color: #0E152B; 
+    --heading-color: #6E7EB1; 
+}
+
+:root{
+    --primary-color: #ADD8F6;
+    --secondary-color: #DEEFFB;
+    --font-color: #688294;
+    --bg-color: #F7FBFE;
+    --heading-color: #9CC2DD;
+}
 
 /* Large devices (laptops/desktops, 914px and up) */
 @media only screen and (min-width: 914px) {
@@ -21,7 +36,7 @@
 	.navButton{
 	display:flex;
 	text-decoration: none;
-	color: #F5F6FA;
+	color:var(--font-color);
 	font-family: 'work sans', sans serif;
 	font-size: 1.5em;
 	font-weight: 400;
@@ -31,7 +46,7 @@
 	}
 	
 	.navButton:hover {
-	opacity:0.6;
+	opacity:0.3;
 	}
 
 }
@@ -43,7 +58,7 @@
 	margin: -161px 0px 0px -50px;
 	padding: 50px;
 	padding-top: 236px;
-	background-color: #F5F6FA;
+	background-color: var(--bg-color);
 	-webkit-font-smoothing: antialiased;
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
@@ -53,12 +68,12 @@
 	
 	.menu li{
 	padding: 10px 0;
-	transition-delay: 2s;
+	transition-delay: 3s;
 	}
 	
 	.navButton {
 	text-decoration: none;
-	color: #1E1E23;
+	color:var(--font-color);
 	opacity:1;
 	font-family: 'work sans', sans serif;
 	font-size: 1.5em;
@@ -144,11 +159,18 @@
 }
 
 html, body {
-	background-color: #f9f9f9;
+	background-color: var(--bg-color);
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
 	height: 100%;
+}
+
+#content{
+	font-family: 'work sans', sans serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	color:var(--font-color);
 }
 
 #logo{
@@ -162,24 +184,7 @@ html, body {
 }
 
 nav {
-	background-color: #1E1E23;
+	background-color: var(--secondary-color);
 	height: 65px;
 	width:100%;
-}
-
-#content{
-	font-family: 'work sans', sans serif;
-	font-size: 1.5em;
-	font-weight: 400;
-	color:var(--font-color);
-}
-
-#box {
-	background-image: url(.images/others/sun.jpeg); 
-	margin-left:auto;
-	margin-right:auto;
-	background-color:#E7E9EA;
-	-webkit-box-shadow:5px 5px 5px #1e1e1e, -5px 5px 5px #1e1e1e;
-	width:80%;
-	height:100%
 }

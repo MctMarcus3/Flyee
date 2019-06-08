@@ -4,19 +4,19 @@
 	<meta charset="utf-8">
 	<title>Flyee Inc.</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
-	<link href="./style.css" rel="stylesheet">
+	<link href="./style_alt.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<base href="./" target="_blank">
-	<link href="favicon.ico" rel="favicon">
+	<link href="favicon.ico" rel="icon" type="image/ico" sizes="16x16">
 	</head>
-  <body>
+	<body>
 	<!-- Logo Svg -->
 	<img src="images/dronesidelogo.svg" onerror="this.onerror=null; this.src='images/dronesidelogo.png'" id="logo">
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
 				<div id="menuToggle">
-				<input type="checkbox" onclick="menuButton()"/>
+				<input type="checkbox" id="menuButton" onclick="menuchecked()" />
 				<span></span>
 				<span></span>
 				<span></span>
@@ -31,7 +31,7 @@
 			</nav>
 		</div>
 	<div id="content">
-	<div id="box">
+	<!-- Place your content here ↓-->
 	<article>
   <h2>Hamburgers are delicious</h2>
   <p>Even better is bacon...ipsum dolor amet kielbasa sirloin pancetta andouille biltong jowl brisket corned beef turducken flank. Andouille corned beef shank tongue leberkas turducken cow pork chop salami bresaola frankfurter shankle. Pork belly porchetta prosciutto, pancetta meatloaf cow frankfurter pork chuck biltong boudin ball tip ham. Corned beef pig beef ribs burgdoggen.</p>
@@ -44,12 +44,20 @@
 
   <p>Cow beef ribs ham hock ball tip bacon pork belly. Shank beef tenderloin landjaeger. Pork loin shank drumstick ball tip, turkey pig ground round kevin t-bone chicken. Ham hock chicken ribeye jowl pork belly bresaola. Sausage leberkas landjaeger ham pork belly bresaola short ribs burgdoggen shank jowl capicola kielbasa swine. Pork belly leberkas boudin tail. Pork chop cow leberkas tenderloin corned beef, shankle ham hock cupim tail chuck jerky rump.</p>
 	</article>
-	<!-- Prevents Scrolling of Content when menu is opened -->
+
+<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
-	</div
-  </body>
-  
-   <script>
+	
+	<div class="theme-switch-wrap">
+		<label class="theme-switch" for="themecheckbox">
+		<input type="checkbox" id="themecheckbox" />
+		<div class="slider round"></div>
+		</label>
+		<em>Enable Light Mode!</em>
+	</div>
+	
+	</body>
+  	<script>
 	function menuchecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
