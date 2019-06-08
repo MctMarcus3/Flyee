@@ -36,7 +36,7 @@
 	.navButton{
 	display:flex;
 	text-decoration: none;
-	color:var(--font-color);
+	color:var(--primary-color);
 	font-family: 'work sans', sans serif;
 	font-size: 1.5em;
 	font-weight: 400;
