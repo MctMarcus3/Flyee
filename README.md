@@ -8,7 +8,7 @@ So basically every layout is roughly very similar without content, your goal is 
 *add content under <!-- Enter your content here ↓-->* 
 
 *Want to use a stylesheet?*
-uncomment <!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->  in head by removing  <!-- --> and add the location of your external stylesheet in href.
+uncomment &lt;!-- &lt;link href="location to your css" type="text/css" rel="stylesheet"&gt; --&gt;  in head by removing  &lt;!-- --&gt; and add the location of your external stylesheet in href.
 
 
 ## Notice
