@@ -5,7 +5,7 @@ For Educational Use Only.
 ## For Group Members
 So basically every layout is roughly very similar without content, your goal is just to 
 
-*add content under <!-- Enter your content here ↓-->* 
+*add content under &lt;!-- Enter your content here ↓--&gt;* 
 
 *Want to use a stylesheet?*
 uncomment &lt;!-- &lt;link href="location to your css" type="text/css" rel="stylesheet"&gt; --&gt;  in head by removing  &lt;!-- --&gt; and add the location of your external stylesheet in href.
