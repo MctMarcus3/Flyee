@@ -2,7 +2,7 @@
 This is a website for a company my group has made.
 For Educational Use Only.
 
-##For Group Members
+## For Group Members
 So basically every layout is roughly very similar without content, your goal is just to 
 
 *add content under <!-- Enter your content here ↓-->* 
