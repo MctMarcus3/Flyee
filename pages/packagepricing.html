@@ -1,0 +1,113 @@
+<!-- Layout with sky background -->
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<title>Flyee Inc.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <base href="./" target="_blank"> -->
+	<link href="../favicon.ico" rel="favicon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="../css/packprice.css" type="text/css" rel="stylesheet">
+	</head>
+  <body>
+	<!-- Logo Svg -->
+	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
+	<!-- Navigation Bar -->
+		<div class="content">
+			<nav role="navigation">
+				<div id="menuToggle">
+				<input type="checkbox" id="menuButton" onclick="menuChecked()"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul class="menu">
+					<li><a class="navButton" href="home.html">Home</a></li>
+					<li><a class="navButton" href="story.html">About Us</a></li>
+					<li><a class="navButton" href="reviews.html">Reviews</a></li>
+					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
+					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
+				</ul>
+				</div>
+			</nav>
+		</div>
+	<!--Background Image -->
+	<div id="box">
+	<div id="content">
+	<!-- Enter your content here ↓-->
+	<div align="middle">
+	<div class="nametitle">Drone Package Prices</div>
+		<p>Small Drone</p>
+		<br/>
+		<img class="hi" src="../images/packprice/smalldrone.svg">
+		<table border="1" cellpadding="5">
+		<tr>
+		<th>Max. Weight</th>
+		<td>5kg</td>
+		</tr>
+		<tr>
+		<th>Drone / Delivery<br/>charge</th>
+		<td>$2</td>
+		</tr>
+		</table>	
+	
+	<p>Medium Drone </p>
+		<br/>
+		<img class="hi" src="../images/packprice/mediumdrone.svg">
+		<table border="1" cellpadding="5">
+		<tr>
+		<th>Max. Weight</th>
+		<td>10kg</td>
+		</tr>
+		<tr>
+		<th>Drone / Delivery<br/>charge</th>
+		<td>$3</td>
+		</tr>
+		</table>
+	
+	<p>Large Drone<br>(recommanded for construction materials)</p>
+		<br/>
+		<img class="hi" src="../images/packprice/largedrone.svg">
+		<table border="1" cellpadding="5">
+		<tr>
+		<th>Max. Weight</th>
+		<td>30kg</td>
+		</tr>
+		<tr>
+		<th>Drone / Delivery<br/>charge</th>
+		<td>$5</td>
+		</tr>
+		</table>
+	</div>
+	<!-- Prevents Scrolling of Content when menu is opened -->
+	</div>
+	</div>
+  </body>
+  
+   <script>
+	function menuChecked(){
+		var checkbox = document.getElementById("menuButton");
+		var content = document.getElementById("content");
+		if(checkbox.checked === true){
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	}	
+	function mediaCheck(mediapx) {
+	if (mediapx.matches) { // If media query matches
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	} else {
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	}
+	}
+	
+	var mediapx = window.matchMedia("(max-width: 914px)")
+	mediaCheck(mediapx) // Call listener function at run time
+	mediapx.addListener(mediaCheck) // Attach listener function on state changes
+	
+</script>
+</html>

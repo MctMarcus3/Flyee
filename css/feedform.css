@@ -1,0 +1,83 @@
+/* Feedback Form stars media queries */
+@media only screen and (max-width: 600px){
+	.rate,
+	.selections{
+	flex:1 1 100%;
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-left:5%;
+	text-align:left;
+	}
+}
+
+/* Feedback Form stars media queries */
+@media only screen and (min-width: 600px){
+	.selections{
+		margin-left:auto;
+	}
+}
+
+/* Small to Medium devices (landscape tablets, 1000px and down) */
+@media only screen and (max-width: 1000px) {
+	/* Feedback Form */
+	.feedback{
+	font-size:1em;
+	font-weight: 400;
+	}
+}
+	
+
+/* Large devices (laptops/desktops, 1000px and up) */
+@media only screen and (min-width: 1000px) {
+}
+
+/* 4k Screens */
+@media only screen and (min-width: 2560px){
+	.rate:not(:checked) > label:before {
+	font-size:48px;
+	}	
+}
+
+/* Feedform */
+.sub {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.sub1 {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+/* Star Rating */
+.rate{
+	direction:rtl;
+	}
+
+.rate input[type=radio] {
+    display: none
+}
+
+.rate:not(:checked) > label:before {
+    content: '★';
+}
+
+.rate label {
+    color: #bbb;
+    font-size: 30px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.rate label:hover,
+.rate label:hover ~ label,
+.rate input[type=radio]:checked ~ label {
+    color: #f2b600
+}
+
+.comments{
+	margin:10px 0px -10px 0px;
+}

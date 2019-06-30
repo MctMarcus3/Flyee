@@ -1,0 +1,111 @@
+<!-- Layout with no background -->
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<title>Flyee Inc.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <base href="./" target="_blank"> -->
+	<link href="../favicon.ico" rel="favicon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<link href="../css/style_og.css" type="text/css" rel="stylesheet">
+	<link href="../css/home.css" type="text/css" rel="stylesheet">
+	</head>
+  <body>
+	<!-- Logo Svg -->
+	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
+	<!-- Navigation Bar -->
+		<div class="content">
+			<nav role="navigation">
+				<div id="menuToggle">
+				<input type="checkbox" id="menuButton" onclick="menuChecked()"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul class="menu">
+					<li><a class="navButton" href="home_og.html">Home</a></li>
+					<li><a class="navButton" href="story_og.html">About Us</a></li>
+					<li><a class="navButton" href="reviews_og.html">Reviews</a></li>
+					<li><a class="navButton" href="packagepricing_og.html">Package Pricing</a></li>
+					<li><a class="navButton" href="feedform_og.html">Feedback Us</a></li>
+				</ul>
+				</div>
+			</nav>
+		</div>
+	<div id="content">
+	<!-- Enter your content here ↓ -->
+	<div id="slider">
+	<figure>
+	<div class="slide">
+	<img src="../images/home/Promotion1.png"  alt="" />
+	</div>
+	<div class="slide">
+    <img src="../images/home/Promotion2.png" alt="" />
+	</div>
+	<div class="slide">
+	<img src="../images/home/filler.png" alt="" />
+	</div>
+	<div class="slide">
+	<img src="../images/home/Promotion1.png"  alt="" />
+	</div>
+	</figure>
+	</div>
+	<div class="section">
+	<div class="section-title">Track Your Package</div>
+	<form action="track.html"></form>
+		<div class="track"> 
+		<div>Tracking Number</div>
+		<div class="trackno">
+		<input type="number" name="tracknum" id="tracknum" placeholder="1249418002840113" required>
+		<div><input type="submit" value="Submit" /></div>
+		</div>
+		</div>
+	</form>
+	</div>
+	<div class="section">
+	<div class="section-title">News</div>
+	<div id="news">
+		<div class="news-part">
+		<img src="../images/home/newsfiller.png">
+		<div class="news-part-title">Flyee's First Promotion</div>
+		<div class="news-part-info">Flyee has it's first promotion today ... </div>
+		<div><a href="#">Read More</a></div>
+		</div>
+		<div class="news-part">
+		<img src="../images/home/newsfiller.png">
+		<div class="news-part-title">Flyee is NOW OFFICAL</div>
+		<div class="news-part-info">Flyee is now officially a thing ... </div>
+		<div><a href="#">Read More</a></div>
+		</div>
+	</div>
+	</div>
+	<!-- Prevents Scrolling of Content when menu is opened -->
+	</div>
+  </body>
+  
+   <script>
+	function menuchecked(){
+		var checkbox = document.getElementById("menuButton");
+		var content = document.getElementById("content");
+		if(checkbox.checked == true){
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	}	
+	function mediaCheck(mediapx) {
+	if (mediapx.matches) { // If media query matches
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	} else {
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	}
+	}
+	
+	var mediapx = window.matchMedia("(max-width: 914px)")
+	mediaCheck(mediapx) // Call listener function at run time
+	mediapx.addListener(mediaCheck) // Attach listener function on state changes
+	
+</script>
+</html>

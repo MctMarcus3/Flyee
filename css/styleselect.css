@@ -1,0 +1,29 @@
+
+#themestyle {
+	height: 400px;
+	display: flex;
+	/* flex-direction: column;*/
+    align-items: center;
+	/* justify-content: center;*/
+	font-family: 'work sans', sans serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	color:#000000;
+}
+
+#themestyle table {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td{
+	text-align: center;
+}

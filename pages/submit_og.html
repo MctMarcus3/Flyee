@@ -1,4 +1,4 @@
-<!-- Layout with theme switcher-->
+<!-- Layout with no background -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,19 +6,19 @@
 	<title>Flyee Inc.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <base href="./" target="_blank"> -->
-	<link href="favicon.ico" rel="icon" type="image/ico" sizes="16x16">
-	<link href="./style_alt.css" type="text/css" rel="stylesheet">
+	<link href="../favicon.ico" rel="favicon">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<link href="../css/style_og.css" type="text/css" rel="stylesheet">
 	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
 	</head>
-	<body>
+  <body>
 	<!-- Logo Svg -->
-	<img src="images/dronesidelogo.svg" onerror="this.onerror=null; this.src='images/dronesidelogo.png'" id="logo">
+	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
 				<div id="menuToggle">
-				<input type="checkbox" id="menuButton" onclick="menuChecked()" />
+				<input type="checkbox" id="menuButton" onclick="menuchecked()"/>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -28,26 +28,25 @@
 					<li><a class="navButton" href="#">Reviews</a></li>
 					<li><a class="navButton" href="#">Package Pricing</a></li>
 					<li><a class="navButton" href="#">Feedback Us</a></li>
-					<li><div class="theme-switch-wrapper">
-					<label class="theme-switch" for="themebox">
-					<input type="checkbox" id="themebox" />
-					<div class="slider round"></div>
-					</label>
-					<label class="navButton" for="themebox">Enable Light Mode!</em>
-					</div>
-					</li>
 				</ul>
+				</div>
 			</nav>
+		</div>
 	<div id="content">
-	<!-- Place your content here ↓-->
-	
-
+	<!-- Enter your content here ↓ -->
+	<div class="text">
+	<h1 align="center">Feedback Form</h1>
+	<p align="center">
+	Thank you for taking the time to fill in our online feedback form.
+	<br/>
+	-Flyee Inc
+	<p>
 	<!-- Prevents Scrolling of Content when menu is opened -->
-	</div>	
-	</body>
-  	<script>
-	<!-- Menu Check	 -->
-	function menuChecked(){
+	</div>
+  </body>
+  
+   <script>
+	function menuchecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
 		if(checkbox.checked == true){
@@ -56,11 +55,10 @@
 			content.style.display = "block";
 		}
 	}	
-	<!-- Media check -->
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
-	document.getElementById("menuButton").checked = true;
-	content.style.display = "none";
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
 	} else {
 	document.getElementById("menuButton").checked = false;
 	content.style.display = "block";
@@ -71,19 +69,5 @@
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
 	
-	<!-- Theme switcher -->
-	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-
-	function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-    }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
-		
 </script>
 </html>
