@@ -1,0 +1,291 @@
+<!-- Layout with theme switcher-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Flyee Inc.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <base href="./" target="_blank"> -->
+	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<link href="../css/feedform.css" type="text/css" rel="stylesheet"> 
+	</head>
+	<body>
+	<!-- Logo Svg -->
+	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
+	<!-- Navigation Bar -->
+		<div class="content">
+			<nav role="navigation">
+				<div id="menuToggle">
+				<input type="checkbox" id="menuButton" onclick="menuChecked()"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul class="menu">
+					<li><a class="navButton" href="home.html">Home</a></li>
+					<li><a class="navButton" href="story.html">About Us</a></li>
+					<li><a class="navButton" href="reviews.html">Reviews</a></li>
+					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
+					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
+					<li><div class="theme-switch-wrapper">
+					<label class="theme-switch" for="themebox">
+					<input type="checkbox" id="themebox" />
+					<div class="slider round"></div>
+					</label>
+					<label class="navButton" for="themebox">Enable Light Mode!</em>
+					</div>
+				</ul>
+				</div>
+			</nav>
+		</div>
+	<div id="content">
+	<!-- Place your content here ↓-->
+	<div class="text">
+	<form action="submit.php" method="get">
+	<h1 align="center">Feedback Form</h1>
+	<p>Thank you for taking the time to fill in our online feedback form. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
+		<div class="feedback">
+			<div class="sub1">
+				<div><label for="name">Name:</label></div>
+				<div class="selections2"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
+				<br />
+				</div>
+				<div class="sub1">
+				<div><label for="email">Email:</label></div>
+				<div class="selections2"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
+				<br />
+				</div>
+				<div class="sub1">
+				<div><label for="tracknum">Tracking Number:</label></div>
+				<div class="selections2">
+					<input 
+					type="text" 
+					name="tracknum" 
+					id="tracknum"
+					minlength="16"
+					maxlength="16"
+					title="Please check if the tracking number is 16 digits" 
+					placeholder="1249418002840113" 
+					required />
+				</div>
+		</div>
+		</br>
+		
+		<div>1. Please rate our delivery of the following:</div>
+		<br />
+		<div>
+		<div class="sub">
+		<div class="feedback">Security</div>
+		<div class="rate" required>
+				<input type="radio" name="security" id="security1" value="1" required /><label for="security1"></label>
+				<input type="radio" name="security" id="security2" value="2" required /><label for="security2"></label>
+				<input type="radio" name="security" id="security3" value="3" required /><label for="security3"></label>
+				<input type="radio" name="security" id="security4" value="4" required /><label for="security4"></label>
+				<input type="radio" name="security" id="security5" value="5" required /><label for="security5"></label>
+		</div>
+		</div>
+		<br />
+		<div class="sub">
+		<div class="feedback">Appearance</div>
+		<div class="rate" required>
+				<input type="radio" name="appearance" id="appearance1" value="1" required /><label for="appearance1"></label>
+				<input type="radio" name="appearance" id="appearance2" value="2" required /><label for="appearance2"></label>
+				<input type="radio" name="appearance" id="appearance3" value="3" required /><label for="appearance3"></label>
+				<input type="radio" name="appearance" id="appearance4" value="4" required /><label for="appearance4"></label>
+				<input type="radio" name="appearance" id="appearance5" value="5" required /><label for="appearance5"></label>
+		</div>
+		</div>
+		<br />
+		<div class="sub">
+		<div class="feedback">On-Time Delivery</div>
+		<div class="rate" required>
+				<input type="radio" name="timeDel" id="timeDel1" value="1" required /><label for="timeDel1"></label>
+				<input type="radio" name="timeDel" id="timeDel2" value="2" required /><label for="timeDel2"></label>
+				<input type="radio" name="timeDel" id="timeDel3" value="3" required /><label for="timeDel3"></label>
+				<input type="radio" name="timeDel" id="timeDel4" value="4" required /><label for="timeDel4"></label>
+				<input type="radio" name="timeDel" id="timeDel5" value="5" required /><label for="timeDel5"></label>
+		</div>
+		</div>
+		<br />
+		<div class="sub">
+		<div class="feedback">Accuracy Of Delivery</div>
+		<div class="rate" required>
+				<input type="radio" name="accuracy" id="accuracy1" value="1" required /><label for="accuracy1"></label>
+				<input type="radio" name="accuracy" id="accuracy2" value="2" required /><label for="accuracy2"></label>
+				<input type="radio" name="accuracy" id="accuracy3" value="3" required /><label for="accuracy3"></label>
+				<input type="radio" name="accuracy" id="accuracy4" value="4" required /><label for="accuracy4"></label>
+				<input type="radio" name="accuracy" id="accuracy5" value="5" required /><label for="accuracy5"></label>
+		</div>
+		</div>
+		</div>
+		<br />
+		<div>2. Please rate our customer service representatives on the following</div>
+		<br />
+		<div>
+		<div class="sub">
+		<div class="feedback">Placing Delivery Orders</div>
+		<div class="rate" required>
+				<input type="radio" name="orderPlacing" id="orderPlacing1" value="1" required /><label for="orderPlacing1"></label>
+				<input type="radio" name="orderPlacing" id="orderPlacing2" value="2" required /><label for="orderPlacing2"></label>
+				<input type="radio" name="orderPlacing" id="orderPlacing3" value="3" required /><label for="orderPlacing3"></label>
+				<input type="radio" name="orderPlacing" id="orderPlacing4" value="4" required /><label for="orderPlacing4"></label>
+				<input type="radio" name="orderPlacing" id="orderPlacing5" value="5" required /><label for="orderPlacing5"></label>
+		</div>
+		</div>
+		<br />
+		<div class="sub">
+		<div class="feedback">On-Hold Time</div>
+		<div class="rate" required>
+				<input type="radio" name="holdTime" id="holdTime1" value="1" required /><label for="holdTime1"></label>
+				<input type="radio" name="holdTime" id="holdTime2" value="2" required /><label for="holdTime2"></label>
+				<input type="radio" name="holdTime" id="holdTime3" value="3" required /><label for="holdTime3"></label>
+				<input type="radio" name="holdTime" id="holdTime4" value="4" required /><label for="holdTime4"></label>
+				<input type="radio" name="holdTime" id="holdTime5" value="5" required /><label for="holdTime5"></label>
+		</div>
+		</div>
+		<br />
+		<div class="sub">
+		<div class="feedback">Friendliness</div>
+		<div class="rate" required>
+				<input type="radio" name="friendly" id="friendly1" value="1" required /><label for="friendly1"></label>
+				<input type="radio" name="friendly" id="friendly2" value="2" required /><label for="friendly2"></label>
+				<input type="radio" name="friendly" id="friendly3" value="3" required /><label for="friendly3"></label>
+				<input type="radio" name="friendly" id="friendly4" value="4" required /><label for="friendly4"></label>
+				<input type="radio" name="friendly" id="friendly5" value="5" required /><label for="friendly5"></label>
+		</div>
+		</div>
+		<br />
+		<div class="sub">
+		<div class="feedback">Ability to Answer Questions</div>
+		<div class="rate" required>
+				<input type="radio" name="overallRating" id="overallRating1" value="1" required /><label for="overallRating1"></label>
+				<input type="radio" name="overallRating" id="overallRating2" value="2" required /><label for="overallRating2"></label>
+				<input type="radio" name="overallRating" id="overallRating3" value="3" required /><label for="overallRating3"></label>
+				<input type="radio" name="overallRating" id="overallRating4" value="4" required /><label for="overallRating4"></label>
+				<input type="radio" name="overallRating" id="overallRating5" value="5" required /><label for="overallRating5"></label>
+		</div>
+		</div>
+		</div>
+		<br />
+		<div>
+			<div>3. What three words might you use to describe your delivery experiences with Flyee?</div>
+			<div class="sub1">
+			<div class="selections2">i.</div>
+			<div class="selections2"><input type="text" placeholder="Word 1" /></div>
+			</div>
+			<div class="sub1">
+			<div class="selections2">ii.</div>
+			<div class="selections2"><input type="text" placeholder="Word 2" /></div>
+			</div>
+			<div class="sub1">
+			<div class="selections2">iii.</div>
+			<div class="selections2"><input type="text" placeholder="Word 3" /></div>
+			</div>
+		</div>
+		<br />
+		<div>
+			<div>4. How well do you think we handle deliveries that encounter difficulty? (e.g customer not at home, bad weather condition, etc.)</div>
+			<div>
+				<p class="comments">Comments:</p>
+				<br />
+				<div class="selections2"><textarea rows="8" cols="30" name="DeliveryDiff"></textarea></div>
+			</div>
+		</div>
+		<br />
+		<div>
+			<div>5. Based upon the service Flyee has provided to you, would you refer us to a colleague/friend who is looking for a delivery service?</div>
+			<div class="selections2">
+				<label class="container">Yes
+				<input type="radio" name="referral" required>
+				<span class="checkmark"></span>
+				</label>
+				<label class="container">No
+				<input type="radio" name="referral" required>
+				<span class="checkmark"></span>
+				</label>
+			</div>
+		</div>
+		<br />
+		<div>
+			<div>6. In an effort to exceed your expectations, what could we do differently to add value to our customer-vendor relationship?</div>
+			<div>
+				<p class="comments" id="nilreccommendations">Comments:</p>
+				<br />
+				<div class="selections2"><textarea rows="8" cols="30" name="cusvend" /></textarea></div>
+			</div>
+		</div>
+		
+		<div class="sub">
+		<div class="feedback">7. Overall, how would you rate our service on a scale of 1 to 5 with 1 being the lowest and 5 being the highest?</div>
+		<div class="rate" required>
+				<input type="radio" name="overallRating" id="overallRating1" value="1" required /><label for="overallRating1"></label>
+				<input type="radio" name="overallRating" id="overallRating2" value="2" required /><label for="overallRating2"></label>
+				<input type="radio" name="overallRating" id="overallRating3" value="3" required /><label for="overallRating3"></label>
+				<input type="radio" name="overallRating" id="overallRating4" value="4" required /><label for="overallRating4"></label>
+				<input type="radio" name="overallRating" id="overallRating5" value="5" required /><label for="overallRating5"></label>
+		</div>
+		</div>
+		<div style="text-align:center;">
+		<!-- <input type="button" onclick="location.href='submit_og.html';" value="Submit"/> -->
+		<input type="submit" value="Submit" />
+		</div>
+	</form>
+	</div>
+	<!-- Prevents Scrolling of Content when menu is opened -->
+	</div>
+	<script>
+	//Menu Check
+	function menuChecked(){
+		var checkbox = document.getElementById("menuButton");
+		var content = document.getElementById("content");
+		if(checkbox.checked == true){
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	}
+	//Media check
+	function mediaCheck(mediapx) {
+	if (mediapx.matches) { // If media query matches
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	} else {
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	}
+	}
+
+	var mediapx = window.matchMedia("(max-width: 914px)")
+	mediaCheck(mediapx) // Call listener function at run time
+	mediapx.addListener(mediaCheck) // Attach listener function on state changes
+
+	//Theme switcher
+	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+	const currentTheme = localStorage.getItem('theme');
+
+	if (currentTheme) {
+	document.documentElement.setAttribute('data-theme', currentTheme);
+
+	if (currentTheme === 'light') {
+	toggleSwitch.checked = true;
+	}
+	}
+
+	function switchTheme(e) {
+	if (e.target.checked) {
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
+	}
+		
+	else {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
+	}
+	}
+
+	toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+	</body>
+
+</html>
