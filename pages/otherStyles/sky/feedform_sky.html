@@ -1,4 +1,4 @@
-<!-- Layout with no background -->
+<!-- Layout with sky background -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +8,7 @@
 	<!-- <base href="./" target="_blank"> -->
 	<link href="../favicon.ico" rel="favicon">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<link href="../css/style_og.css" type="text/css" rel="stylesheet">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
 	<link href="../css/feedform.css" type="text/css" rel="stylesheet">
 	</head>
   <body>
@@ -23,17 +23,19 @@
 				<span></span>
 				<span></span>
 				<ul class="menu">
-					<li><a class="navButton" href="home_og.html">Home</a></li>
-					<li><a class="navButton" href="story_og.html">About Us</a></li>
-					<li><a class="navButton" href="reviews_og.html">Reviews</a></li>
-					<li><a class="navButton" href="packagepricing_og.html">Package Pricing</a></li>
-					<li><a class="navButton" href="feedform_og.html">Feedback Us</a></li>
+					<li><a class="navButton" href="home.html">Home</a></li>
+					<li><a class="navButton" href="story.html">About Us</a></li>
+					<li><a class="navButton" href="reviews.html">Reviews</a></li>
+					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
+					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
 				</ul>
 				</div>
 			</nav>
 		</div>
+	<!--Background Image -->
+	<div id="box">
 	<div id="content">
-	<!-- Enter your content here ↓ -->
+	<!-- Enter your content here ↓-->
 	<div class="text">
 	<form action="submit.php" method="post">
 	<h1 align="center">Feedback Form</h1>
@@ -41,17 +43,17 @@
 		<div class="feedback">
 			<div class="sub1">
 				<div><label for="name">Name:</label></div>
-				<div class="selections"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
+				<div class="selections2"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
 				<br />
 				</div>
 				<div class="sub1">
 				<div><label for="email">Email:</label></div>
-				<div class="selections"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
+				<div class="selections2"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
 				<br />
 				</div>
 				<div class="sub1">
 				<div><label for="tracknum">Tracking Number:</label></div>
-				<div class="selections"><input type="number" name="tracknum" id="tracknum" placeholder="1249418002840113" required></div>
+				<div class="selections2"><input type="number" name="tracknum" id="tracknum" placeholder="1249418002840113" required></div>
 			</div>
 		</div>
 		</br>
@@ -155,39 +157,39 @@
 		<div>
 			<div>3. What three words might you use to describe your delivery experiences with Flyee?</div>
 			<div class="sub1">
-			<div>i.</div>
-			<div class="selections"><input type="text" placeholder="Word 1" /></div>
+			<div class="selections2">i.</div>
+			<div class="selections2"><input type="text" placeholder="Word 1" /></div>
 			</div>
 			<div class="sub1">
-			<div>ii.</div>
-			<div class="selections"><input type="text" placeholder="Word 2" /></div>
+			<div class="selections2">ii.</div>
+			<div class="selections2"><input type="text" placeholder="Word 2" /></div>
 			</div>
 			<div class="sub1">
-			<div>iii.</div>
-			<div class="selections"><input type="text" placeholder="Word 3" /></div>
+			<div class="selections2">iii.</div>
+			<div class="selections2"><input type="text" placeholder="Word 3" /></div>
 			</div>
 		</div>
 		<br />
 		<div>
-			<div>4. How well do you think we handle deliveries that encounter difficulty? (e.g customer not home, bad weather condition, etc.)</div>
+			<div>4. How well do you think we handle deliveries that encounter difficulty? (e.g customer not at home, bad weather condition, etc.)</div>
 			<div>
 				<p class="comments">Comments:</p>
 				<br />
-				<div class="selections1"><textarea rows="8" cols="30" name="DeliveryDiff"></textarea></div>
+				<div class="selections2"><textarea rows="8" cols="30" name="DeliveryDiff"></textarea></div>
 			</div>
 		</div>
 		<br />
 		<div>
 			<div>5. Based upon the service Flyee has provided to you, would you refer us to a colleague/friend who is looking for a delivery service?</div>
-			<div>
-				<input type="radio" name="option" onclick="javascript:comments();" id="yes"/><label for="yes">Yes</label>
-				<input type="radio" name="option" onclick="javascript:comments();" id="no"/><label for="no">No</label>
-				<input type="radio" name="option" onclick="javascript:comments();" id="notSure"/><label for="notSure">Not Sure</label>
-				<div id="referral">
-				<p class="comments">If no or not sure, please comment.</p>
-				<br />
-				<div class="selections1"><textarea rows="8" cols="30" name="reccommendations"></textarea></div>
-				</div>
+			<div class="selections2">
+				<label class="container">Yes
+				<input type="radio" name="referral" required>
+				<span class="checkmark"></span>
+				</label>
+				<label class="container">No
+				<input type="radio" name="referral" required>
+				<span class="checkmark"></span>
+				</label>
 			</div>
 		</div>
 		<br />
@@ -196,7 +198,7 @@
 			<div>
 				<p class="comments" id="nilreccommendations">Comments:</p>
 				<br />
-				<div class="selections1"><textarea rows="8" cols="30" name="cusvend" /></textarea></div>
+				<div class="selections2"><textarea rows="8" cols="30" name="cusvend" /></textarea></div>
 			</div>
 		</div>
 		
@@ -218,10 +220,11 @@
 	</div>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
+	</div>
   </body>
   
    <script>
-	function menuchecked(){
+	function menuChecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
 		if(checkbox.checked == true){
@@ -243,7 +246,6 @@
 	var mediapx = window.matchMedia("(max-width: 914px)")
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
-	
 	
 	function comments() {
 	if (document.getElementById("yes").checked == true) {

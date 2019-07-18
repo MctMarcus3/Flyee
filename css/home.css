@@ -51,10 +51,13 @@
 /* Tracking Number*/
 .track{
 	display:flex; 
+	flex-wrap: wrap;
 }
 
 .trackno{
-	margin-left:auto;
+	flex:1 1 100%;
+	margin:10px 0px 0px 0px;
+	text-align:center;
 }
 
 .

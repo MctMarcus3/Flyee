@@ -1,4 +1,4 @@
-<!-- Layout with theme switcher-->
+<!-- Layout with sky background -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,19 +6,19 @@
 	<title>Flyee Inc.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <base href="./" target="_blank"> -->
-	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
-	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="../favicon.ico" rel="favicon">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<!-- <link href="../css/packprice.css" type="text/css" rel="stylesheet"> -->
 	</head>
-	<body>
+  <body>
 	<!-- Logo Svg -->
 	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
 				<div id="menuToggle">
-				<input type="checkbox" id="menuButton" onclick="menuChecked()" />
+				<input type="checkbox" id="menuButton" onclick="menuChecked()"/>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -28,18 +28,14 @@
 					<li><a class="navButton" href="reviews.html">Reviews</a></li>
 					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
 					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
-					<li><div class="theme-switch-wrapper">
-					<label class="theme-switch" for="themebox">
-					<input type="checkbox" id="themebox" />
-					<div class="slider round"></div>
-					</label>
-					<label class="navButton" for="themebox">Enable Light Mode!</em>
-					</div>
-					</li>
 				</ul>
+				</div>
 			</nav>
+		</div>
+	<!--Background Image -->
+	<div id="box">
 	<div id="content">
-	<!-- Place your content here ↓-->
+	<!-- Enter your content here ↓-->
 		<div class="nametitle">About Us</div>
 		
 		<div class="text">
@@ -50,8 +46,10 @@
 		</div>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
-	<script>
-	//Menu Check	 
+	</div>
+  </body>
+  
+   <script>
 	function menuChecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
@@ -61,7 +59,6 @@
 			content.style.display = "block";
 		}
 	}	
-	//Media check
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
 	document.getElementById("menuButton").checked = false;
@@ -76,32 +73,5 @@
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
 	
-	//Theme switcher
-	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-	const currentTheme = localStorage.getItem('theme');
-
-	if (currentTheme) {
-	document.documentElement.setAttribute('data-theme', currentTheme);
-
-	if (currentTheme === 'light') {
-	toggleSwitch.checked = true;
-	}
-	}
-
-	function switchTheme(e) {
-	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
-	}
-    
-	else {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
-	}
-	}
-
-	toggleSwitch.addEventListener('change', switchTheme, false);
 </script>
-	</body>
-  
 </html>

@@ -7,9 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <base href="./" target="_blank"> -->
 	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
-	<link href="../css/style_alt.css" type="text/css" rel="stylesheet">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
+	<link href="../css/mapstyle.css" type="text/css" rel="stylesheet">
+
 	</head>
 	<body>
 	<!-- Logo Svg -->
@@ -23,11 +26,11 @@
 				<span></span>
 				<span></span>
 				<ul class="menu">
-					<li><a class="navButton" href="home_alt.html">Home</a></li>
-					<li><a class="navButton" href="story_alt.html">About Us</a></li>
-					<li><a class="navButton" href="reviews_alt.html">Reviews</a></li>
-					<li><a class="navButton" href="packagepricing_alt.html">Package Pricing</a></li>
-					<li><a class="navButton" href="feedform_alt.html">Feedback Us</a></li>
+					<li><a class="navButton" href="home.html">Home</a></li>
+					<li><a class="navButton" href="story.html">About Us</a></li>
+					<li><a class="navButton" href="reviews.html">Reviews</a></li>
+					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
+					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
 					<li><div class="theme-switch-wrapper">
 					<label class="theme-switch" for="themebox">
 					<input type="checkbox" id="themebox" />
@@ -38,20 +41,13 @@
 					</li>
 				</ul>
 			</nav>
-	<div id="content">
+	<div id="content">	
 	<!-- Place your content here ↓-->
-		<div class="nametitle">About Us</div>
-		
-		<div class="text">
-		<p>We are a group of students who are advertising our delivery system based on drones.</p>
-		<p>We have started a small delivery service company and is offering delivery services for any product for any size and weight.</p>
-		<p>You can get your packages delivered right to your doorstep without needing the postman coming straight up to your door and having to sign for it but rather have a drone which drops the package outside of your door, you pick it up and release the drone.</p>
-		<p>And there you go! Package delivered!</p>	
-		</div>
+	<p>Document not found.</p>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
 	<script>
-	//Menu Check	 
+	//Menu Check
 	function menuChecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
@@ -60,7 +56,7 @@
 		} else {
 			content.style.display = "block";
 		}
-	}	
+	}
 	//Media check
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
@@ -71,11 +67,11 @@
 	content.style.display = "block";
 	}
 	}
-	
+
 	var mediapx = window.matchMedia("(max-width: 914px)")
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
-	
+
 	//Theme switcher
 	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 	const currentTheme = localStorage.getItem('theme');
@@ -101,7 +97,22 @@
 	}
 
 	toggleSwitch.addEventListener('change', switchTheme, false);
-</script>
+	
+	var url = window.location.search;
+	url = url.replace("?tracknum=", ''); // remove the ?
+
+	document.getElementById("tracknum").value = tracknum;
+
+	//Get URL Parameter
+		var trackNum = getUrlParameter("tracknum");
+	//Mapbox access api
+	mapboxgl.accessToken = 'pk.eyJ1IjoibXV4ZW50ZXJ0YWlubWVudCIsImEiOiJjanhzbzU1MXIwOXpxM29zYmJiYW9kZjV0In0.aWr37oefY1IT-MgzrJqqKw';
+	var map = new mapboxgl.Map({
+	container: 'map',
+	style: 'mapbox://styles/mapbox/streets-v11'
+	});
+	
+	</script>
 	</body>
-  
+
 </html>

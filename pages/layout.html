@@ -1,4 +1,4 @@
-<!-- Layout with sky background -->
+<!-- Layout with theme switcher-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,19 +6,19 @@
 	<title>Flyee Inc.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <base href="./" target="_blank"> -->
-	<link href="../favicon.ico" rel="favicon">
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
 	<link href="../css/style.css" type="text/css" rel="stylesheet">
-	<!-- <link href="../css/packprice.css" type="text/css" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
 	</head>
-  <body>
+	<body>
 	<!-- Logo Svg -->
 	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
 				<div id="menuToggle">
-				<input type="checkbox" id="menuButton" onclick="menuChecked()"/>
+				<input type="checkbox" id="menuButton" onclick="menuChecked()" />
 				<span></span>
 				<span></span>
 				<span></span>
@@ -28,23 +28,37 @@
 					<li><a class="navButton" href="reviews.html">Reviews</a></li>
 					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
 					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
+					<li><div class="theme-switch-wrapper">
+					<label class="theme-switch" for="themebox">
+					<input type="checkbox" id="themebox" />
+					<div class="slider round"></div>
+					</label>
+					<label class="navButton" for="themebox">Enable Light Mode!</em>
+					</div>
+					</li>
 				</ul>
-				</div>
 			</nav>
-		</div>
-	<!--Background Image -->
-	<div id="box">
 	<div id="content">
-	<!-- Enter your content here ↓-->
-	
-	
-	
+	<!-- Place your content here ↓-->
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac dolor ante. Proin nec dolor condimentum, porta felis quis, auctor risus. Donec a porta elit. Suspendisse interdum nec odio cursus rhoncus. Proin laoreet malesuada odio nec feugiat. Pellentesque elit ipsum, suscipit et tincidunt quis, dignissim vitae dolor. Donec in mollis libero. Nullam vitae ipsum a magna gravida varius non vel metus. Cras tortor leo, lacinia at bibendum quis, porttitor eu lacus. Morbi posuere urna non risus commodo efficitur. Pellentesque at ipsum turpis. Proin est erat, bibendum non lacus sit amet, luctus sollicitudin eros. Phasellus nec mi aliquam, varius turpis non, maximus dui. Mauris a fringilla metus, sed gravida ipsum. Aliquam erat volutpat.
+<br />
+Nam non lobortis nisl. Sed ligula ante, scelerisque at mi sed, ultrices euismod elit. Nulla laoreet euismod enim. Donec ultricies lorem id tristique sagittis. Maecenas et laoreet nisl. Ut id placerat magna. Pellentesque et nisl lobortis, aliquet eros eleifend, egestas massa. Fusce luctus vehicula nibh. Curabitur nec mauris odio. Integer lacus sapien, vehicula ultrices pretium et, eleifend vitae ante. Curabitur ac odio dui. Sed venenatis lacinia orci, rhoncus accumsan magna condimentum et. Nullam dignissim eu metus vel condimentum. Praesent accumsan scelerisque diam, vel auctor justo.
+<br />
+
+Sed lectus metus, tempor ac faucibus vel, convallis eget purus. Nullam varius eget urna eget dignissim. Pellentesque purus massa, pretium nec lacus at, sollicitudin dignissim nisi. Proin non sapien varius, aliquet felis id, aliquet est. Ut ultrices neque urna, ac pretium odio placerat eu. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a dui non ipsum hendrerit scelerisque. Sed molestie interdum mattis. Nunc vitae pellentesque purus. Ut sed sapien auctor, vehicula turpis quis, pharetra justo. Mauris auctor volutpat augue, ac sollicitudin erat. Nulla quis felis sollicitudin, tempus dolor nec, aliquam massa. Vivamus vitae arcu luctus, ullamcorper lorem non, finibus sem.
+<br />
+
+Mauris venenatis vitae orci id sagittis. Sed congue nibh ac volutpat egestas. Nam auctor, velit nec volutpat interdum, libero purus iaculis massa, at venenatis augue quam iaculis risus. Praesent sapien elit, dapibus quis tellus vitae, accumsan commodo magna. Nullam eget ultricies velit. Maecenas sit amet purus ac magna convallis vulputate. Integer nisl eros, eleifend a lobortis at, cursus nec mauris. Maecenas efficitur leo dui. Nam sed nisi est.
+<br />
+
+Duis imperdiet tortor a nisl tristique ultricies. Maecenas dapibus lorem ut tortor consequat, nec laoreet ipsum elementum. Aliquam at tortor ornare, rhoncus metus ut, porta tortor. Mauris lorem neque, convallis sit amet rhoncus sed, dictum at neque. In vestibulum est nec felis rutrum lobortis. Nulla sit amet ante auctor justo cursus finibus eu ac augue. Pellentesque id tincidunt ex. Nullam aliquam odio orci, ut vehicula tortor euismod eu. Quisque sollicitudin tortor at mi dignissim tincidunt eu quis diam. Curabitur lorem diam, convallis vitae ipsum ut, laoreet suscipit neque. Proin pellentesque lorem libero, eget varius nisl efficitur ut. Quisque sagittis lectus et varius lobortis.
+<br />
+	</p>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
-	</div>
-  </body>
-  
-   <script>
+	<script>
+	//Menu Check
 	function menuChecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
@@ -53,7 +67,8 @@
 		} else {
 			content.style.display = "block";
 		}
-	}	
+	}
+	//Media check
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
 	document.getElementById("menuButton").checked = false;
@@ -63,10 +78,37 @@
 	content.style.display = "block";
 	}
 	}
-	
+
 	var mediapx = window.matchMedia("(max-width: 914px)")
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
-	
+
+	//Theme switcher
+	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+	const currentTheme = localStorage.getItem('theme');
+
+	if (currentTheme) {
+	document.documentElement.setAttribute('data-theme', currentTheme);
+
+	if (currentTheme === 'light') {
+	toggleSwitch.checked = true;
+	}
+	}
+
+	function switchTheme(e) {
+	if (e.target.checked) {
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
+	}
+    
+	else {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
+	}
+	}
+
+	toggleSwitch.addEventListener('change', switchTheme, false);
 </script>
+	</body>
+
 </html>

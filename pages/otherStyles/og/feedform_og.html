@@ -1,4 +1,4 @@
-<!-- Layout with theme switcher-->
+<!-- Layout with no background -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,12 +6,12 @@
 	<title>Flyee Inc.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <base href="./" target="_blank"> -->
-	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
-	<link href="../css/style_alt.css" type="text/css" rel="stylesheet">
+	<link href="../favicon.ico" rel="favicon">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<link href="../css/feedform.css" type="text/css" rel="stylesheet"> 
+	<link href="../css/style_og.css" type="text/css" rel="stylesheet">
+	<link href="../css/feedform.css" type="text/css" rel="stylesheet">
 	</head>
-	<body>
+  <body>
 	<!-- Logo Svg -->
 	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
 	<!-- Navigation Bar -->
@@ -23,24 +23,17 @@
 				<span></span>
 				<span></span>
 				<ul class="menu">
-					<li><a class="navButton" href="home_alt.html">Home</a></li>
-					<li><a class="navButton" href="story_alt.html">About Us</a></li>
-					<li><a class="navButton" href="reviews_alt.html">Reviews</a></li>
-					<li><a class="navButton" href="packagepricing_alt.html">Package Pricing</a></li>
-					<li><a class="navButton" href="feedform_alt.html">Feedback Us</a></li>
-					<li><div class="theme-switch-wrapper">
-					<label class="theme-switch" for="themebox">
-					<input type="checkbox" id="themebox" />
-					<div class="slider round"></div>
-					</label>
-					<label class="navButton" for="themebox">Enable Light Mode!</em>
-					</div>
+					<li><a class="navButton" href="home_og.html">Home</a></li>
+					<li><a class="navButton" href="story_og.html">About Us</a></li>
+					<li><a class="navButton" href="reviews_og.html">Reviews</a></li>
+					<li><a class="navButton" href="packagepricing_og.html">Package Pricing</a></li>
+					<li><a class="navButton" href="feedform_og.html">Feedback Us</a></li>
 				</ul>
 				</div>
 			</nav>
 		</div>
 	<div id="content">
-	<!-- Place your content here ↓-->
+	<!-- Enter your content here ↓ -->
 	<div class="text">
 	<form action="submit.php" method="post">
 	<h1 align="center">Feedback Form</h1>
@@ -48,17 +41,17 @@
 		<div class="feedback">
 			<div class="sub1">
 				<div><label for="name">Name:</label></div>
-				<div class="selections"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
+				<div class="selections2"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
 				<br />
 				</div>
 				<div class="sub1">
 				<div><label for="email">Email:</label></div>
-				<div class="selections"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
+				<div class="selections2"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
 				<br />
 				</div>
 				<div class="sub1">
 				<div><label for="tracknum">Tracking Number:</label></div>
-				<div class="selections"><input type="number" name="tracknum" id="tracknum" placeholder="1249418002840113" required></div>
+				<div class="selections2"><input type="number" name="tracknum" id="tracknum" placeholder="1249418002840113" required></div>
 			</div>
 		</div>
 		</br>
@@ -162,39 +155,39 @@
 		<div>
 			<div>3. What three words might you use to describe your delivery experiences with Flyee?</div>
 			<div class="sub1">
-			<div>i.</div>
-			<div class="selections"><input type="text" placeholder="Word 1" /></div>
+			<div class="selections2">i.</div>
+			<div class="selections2"><input type="text" placeholder="Word 1" /></div>
 			</div>
 			<div class="sub1">
-			<div>ii.</div>
-			<div class="selections"><input type="text" placeholder="Word 2" /></div>
+			<div class="selections2">ii.</div>
+			<div class="selections2"><input type="text" placeholder="Word 2" /></div>
 			</div>
 			<div class="sub1">
-			<div>iii.</div>
-			<div class="selections"><input type="text" placeholder="Word 3" /></div>
+			<div class="selections2">iii.</div>
+			<div class="selections2"><input type="text" placeholder="Word 3" /></div>
 			</div>
 		</div>
 		<br />
 		<div>
-			<div>4. How well do you think we handle deliveries that encounter difficulty? (e.g customer not home, bad weather condition, etc.)</div>
+			<div>4. How well do you think we handle deliveries that encounter difficulty? (e.g customer not at home, bad weather condition, etc.)</div>
 			<div>
 				<p class="comments">Comments:</p>
 				<br />
-				<div class="selections1"><textarea rows="8" cols="30" name="DeliveryDiff"></textarea></div>
+				<div class="selections2"><textarea rows="8" cols="30" name="DeliveryDiff"></textarea></div>
 			</div>
 		</div>
 		<br />
 		<div>
 			<div>5. Based upon the service Flyee has provided to you, would you refer us to a colleague/friend who is looking for a delivery service?</div>
-			<div>
-				<input type="radio" name="option" onclick="javascript:comments();" id="yes"/><label for="yes">Yes</label>
-				<input type="radio" name="option" onclick="javascript:comments();" id="no"/><label for="no">No</label>
-				<input type="radio" name="option" onclick="javascript:comments();" id="notSure"/><label for="notSure">Not Sure</label>
-				<div id="referral">
-				<p class="comments">If no or not sure, please comment.</p>
-				<br />
-				<div class="selections1"><textarea rows="8" cols="30" name="reccommendations"></textarea></div>
-				</div>
+			<div class="selections2">
+				<label class="container">Yes
+				<input type="radio" name="referral" required>
+				<span class="checkmark"></span>
+				</label>
+				<label class="container">No
+				<input type="radio" name="referral" required>
+				<span class="checkmark"></span>
+				</label>
 			</div>
 		</div>
 		<br />
@@ -203,7 +196,7 @@
 			<div>
 				<p class="comments" id="nilreccommendations">Comments:</p>
 				<br />
-				<div class="selections1"><textarea rows="8" cols="30" name="cusvend" /></textarea></div>
+				<div class="selections2"><textarea rows="8" cols="30" name="cusvend" /></textarea></div>
 			</div>
 		</div>
 		
@@ -225,9 +218,10 @@
 	</div>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
-	<script>
-	//Menu Check
-	function menuChecked(){
+  </body>
+  
+   <script>
+	function menuchecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
 		if(checkbox.checked == true){
@@ -235,8 +229,7 @@
 		} else {
 			content.style.display = "block";
 		}
-	}
-	//Media check
+	}	
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
 	document.getElementById("menuButton").checked = false;
@@ -246,36 +239,11 @@
 	content.style.display = "block";
 	}
 	}
-
+	
 	var mediapx = window.matchMedia("(max-width: 914px)")
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
-
-	//Theme switcher
-	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-	const currentTheme = localStorage.getItem('theme');
-
-	if (currentTheme) {
-	document.documentElement.setAttribute('data-theme', currentTheme);
-
-	if (currentTheme === 'light') {
-	toggleSwitch.checked = true;
-	}
-	}
-
-	function switchTheme(e) {
-	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
-	}
-    
-	else {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
-	}
-	}
-
-	toggleSwitch.addEventListener('change', switchTheme, false);
+	
 	
 	function comments() {
 	if (document.getElementById("yes").checked == true) {
@@ -292,6 +260,4 @@
 		}
 	}
 </script>
-	</body>
-
 </html>
