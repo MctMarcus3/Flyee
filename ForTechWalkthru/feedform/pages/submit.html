@@ -1,0 +1,101 @@
+<!-- Layout with theme switcher-->
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<title>Flyee Inc.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <base href="./" target="_blank"> -->
+	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
+	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
+	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
+	</head>
+	<body>
+	<!-- Logo Svg -->
+	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
+	<!-- Navigation Bar -->
+		<div class="content">
+			<nav role="navigation">
+				<div id="menuToggle">
+				<input type="checkbox" id="menuButton" onclick="menuChecked()" />
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul class="menu">
+					<li><a class="navButton" href="pages/home.html#">Home</a></li>
+					<li><a class="navButton" href="pages/aboutus.html#">About Us</a></li>
+					<li><a class="navButton" href="#">Reviews</a></li>
+					<li><a class="navButton" href="#">Package Pricing</a></li>
+					<li><a class="navButton" href="#">Feedback Us</a></li>
+					<li><div class="theme-switch-wrapper">
+					<label class="theme-switch" for="themebox">
+					<input type="checkbox" id="themebox" />
+					<div class="slider round"></div>
+					</label>
+					<label class="navButton" for="themebox">Enable Light Mode!</em>
+					</div>
+					</li>
+				</ul>
+			</nav>
+	<div id="content">
+	<!-- Place your content here ↓-->
+	<h1 align="center">Feedback Form</h1>
+	<p align="center">
+	Thank you for taking the time to fill in our online feedback form.
+	<br/>
+	-Flyee Inc
+	<p>
+	<!-- Prevents Scrolling of Content when menu is opened -->
+	</div>
+	<script>
+	//Menu Check	 
+	function menuChecked(){
+		var checkbox = document.getElementById("menuButton");
+		var content = document.getElementById("content");
+		if(checkbox.checked == true){
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	}	
+	//Media check
+	function mediaCheck(mediapx) {
+	if (mediapx.matches) { // If media query matches
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	} else {
+	document.getElementById("menuButton").checked = false;
+	content.style.display = "block";
+	}
+	}
+	
+	var mediapx = window.matchMedia("(max-width: 914px)")
+	mediaCheck(mediapx) // Call listener function at run time
+	mediapx.addListener(mediaCheck) // Attach listener function on state changes
+	
+	//Theme switcher 
+	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+	const currentTheme = localStorage.getItem('theme');
+	
+	if (currentTheme === 'light') {
+        toggleSwitch.checked = false;
+    }
+	
+	
+	function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+		localStorage.setItem('theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+		localStorage.setItem('theme', 'light');
+    }    
+	}
+
+	toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+	</body>
+  
+</html>
