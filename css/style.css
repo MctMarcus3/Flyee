@@ -486,3 +486,10 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+/* Anchor */
+a{
+	color:var(--font-color);
+}
+a:hover{
+	color:var(--bg-color);
+}
