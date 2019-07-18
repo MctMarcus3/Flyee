@@ -488,8 +488,8 @@ input[type="number"] {
 
 /* Anchor */
 a{
-	color:var(--font-color);
+	color:var(--secondary-color);
 }
 a:hover{
-	color:var(--bg-color);
+	color:var(--font-color);
 }
