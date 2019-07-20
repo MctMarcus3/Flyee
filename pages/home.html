@@ -13,9 +13,7 @@
 	</head>
 	<body>
 	<!-- Logo Svg -->
-	<a href="home.html">
-	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
-	</a>
+	<a href="../pages/home.html"><img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo"></a>
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
@@ -70,8 +68,9 @@
 			id="tracknum"
 			minlength="16"
 			maxlength="16"
-			title="Please check if the tracking number is 16 digits" 
+			title="Please check if the tracking number is correct" 
 			placeholder="1249418002840113" 
+			pattern="1\d{15}" 
 			required />
 		<div><input type="submit" value="Submit" /></div>
 		</div>

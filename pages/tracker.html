@@ -8,6 +8,7 @@
 	<!-- <base href="./" target="_blank"> -->
 	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
 	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="../css/home.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
 	<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
@@ -16,7 +17,7 @@
 	</head>
 	<body>
 	<!-- Logo Svg -->
-	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
+	<a href="../pages/home.html"><img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo"></a>
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
@@ -43,9 +44,12 @@
 			</nav>
 	<div id="content">	
 	<!-- Place your content here ↓-->
-	<p>Document not found.</p>
+	<input type="text" id="trackingNum" disabled />
+	<div id='map'></div>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
+	
+	</body>
 	<script>
 	//Menu Check
 	function menuChecked(){
@@ -98,21 +102,95 @@
 
 	toggleSwitch.addEventListener('change', switchTheme, false);
 	
-	var url = window.location.search;
-	url = url.replace("?tracknum=", ''); // remove the ?
-
-	document.getElementById("tracknum").value = tracknum;
-
-	//Get URL Parameter
-		var trackNum = getUrlParameter("tracknum");
-	//Mapbox access api
-	mapboxgl.accessToken = 'pk.eyJ1IjoibXV4ZW50ZXJ0YWlubWVudCIsImEiOiJjanhzbzU1MXIwOXpxM29zYmJiYW9kZjV0In0.aWr37oefY1IT-MgzrJqqKw';
+	//Parse Url Variable
+	window.onload = function(){
+	var body = document.getElementsByTagName('body')[0];
+	function parseURLParam(param) 
+	{
+		//USAGE: var PageName = parseURLParam('page')
+		var fullURL = window.location.search.substring(1);
+		var paramArray = fullURL.split('&');
+		for (var i = 0; i < paramArray.length; i++)
+		{
+			var currParam = paramArray[i].split('=');
+			if (currParam[0] == param)
+			{
+				return currParam[1];
+			}
+		}
+	}
+	
+	var trackval = parseURLParam('tracknum');
+	
+	document.getElementById('trackingNum').value = trackval; 
+	
+	console.log(trackval);
+	console.log(typeof trackval);
+	
+	var term = trackval;
+	var re = new RegExp(/1[2-4]\d{5}103[6-9]\d{5}/);
+	if (re.test(term)) {
+    //console.log("Valid");
+	
+	var coordinates = parseInt(trackval, 10);
+	console.log(coordinates)
+	console.log(typeof coordinates);
+	
+	//Mapbox Api
+	/*mapboxgl.accessToken = 'pk.eyJ1IjoibXV4ZW50ZXJ0YWlubWVudCIsImEiOiJjanhzbzU1MXIwOXpxM29zYmJiYW9kZjV0In0.aWr37oefY1IT-MgzrJqqKw';
 	var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v11'
+	style: 'mapbox://styles/mapbox/streets-v11',
+	center: [103.824885, 1.354969],
+	zoom: 10,
+	maxZoom: 15,
+	minZoom: 10
 	});
+	// Drone Logo
+	map.on('load', function() {
+		map.loadImage('../images/imgout/dronenologo_thumb.png', 
+		function(error, image) {
+			if (error) throw error;
+			map.addImage('drone', image);
+			map.addLayer({
+			"id": "points",
+			"type": "symbol",
+			"source": {
+				"type": "geojson",
+				"data": {
+					"type": "FeatureCollection",
+					"features": [{
+						"type": "Feature",
+						"geometry": {
+							"type": "Point",
+							"coordinates": [coordsX, coordsY]
+							}
+						}]
+						}
+					},
+					"layout": {
+						"icon-image": "drone",
+						"icon-size": 0.25
+					}
+				});
+			});
+		});*/
+	}	
+	
+	else {
+	var trackingNum = document.getElementById("trackingNum");
+	var packageInfo = document.createElement("p");
+	packageInfo.setAttribute("class", "text");
+	packageInfo.innerHTML = "Package not found." + "<br>" + "Please check tracking number."+ "<br>" +" Your tracking number is: " + "<b>" + trackval + "</b>";
+	trackingNum.parentNode.replaceChild(packageInfo, trackingNum);
+	}
+	
+	var map = document.getElementById('map');
+	map.remove();
+	}
+	
+	
+	//Mapbox access api
 	
 	</script>
-	</body>
-
 </html>
