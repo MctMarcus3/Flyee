@@ -152,6 +152,23 @@
 	.slider.round {
 	border-radius: 34px;
 	}
+	
+	/* Changes footer after certain size */
+	.footer > div{
+		flex:1 1 100%;
+		text-align:center;
+	}
+	
+	/* adds padding to ending */
+	.cpright > span, .cpright > img{
+		padding:30px 0px;
+	}
+	
+	.cpright > img{
+	width:12.5%;
+	height:12.5%;
+	}
+	
 }
 
 /* Large devices (laptops/desktops, 1000px and up) */
@@ -225,6 +242,14 @@
 	.slider.round {
 	border-radius: 34px;
 	}
+	
+	.cpright > span, .cpright > img{
+		padding:30px 0px;
+	}
+	.cpright > img{
+	width:5%;
+	height:5%;
+	}
 }
 /* 4K screens and below */
 @media only screen and (max-width: 2560px){
@@ -236,15 +261,23 @@
 	margin: 8px 0;
 	}
 
-textarea {
-	height: 150px;
-	padding: 12px 20px;
-}
+	textarea {
+		height: 150px;
+		padding: 12px 20px;
+	}
 
-input[type=button], input[type=submit] {
-	padding: 16px 32px;
-	margin: 20px 2px;
-}
+	input[type=button], input[type=submit] {
+		padding: 16px 32px;
+		margin: 20px 2px;
+	}
+
+	.footlinks img{
+		width:15px;
+		height:15px;
+	}
+	.footlogo img{
+		margin-top:24px;
+	}
 }
 
 /* 4k Screens and Higher */
@@ -328,6 +361,16 @@ input[type=button], input[type=submit] {
 	padding: 32px 64px;
 	margin: 40px 4px;
 	}
+	
+	.footlogo img{
+	width:200%;
+	height:100%;
+	}
+	
+	.footlinks img{
+	width:30px;
+	height:30px;
+	}
 }
 
 html, body {
@@ -386,10 +429,11 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-
 .slider.round:before {
   border-radius: 50%;
 }
+
+	
 
 /* Reviews css */
 .card {
@@ -485,3 +529,44 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+/* Footer */
+.footer{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	background-color:var(--font-color);
+	color:var(--primary-color);
+	list-style-type: none;
+}
+.footlinks li{
+	list-style-type: none;
+}
+.footlinks {
+	color:var(--primary-color);
+	text-align:left;
+}
+
+.cpright{
+	display:flex;
+	justify-content:center;
+}
+
+/* footer links */
+.footlink {
+	color: var(--heading-color);
+}
+.footlink:visited {
+	color: var(--secondary-color);
+}
+
+.foottitle{
+	font-size:1.55em;
+}
+
+/* footer logo */
+.footlogo {
+	display:block;
+}
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="125.18463mm"
+   height="125.18463mm"
+   viewBox="0 0 125.18463 125.18463"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="C:\Users\Marcus T\Desktop\Xampp\htdocs\Flyee\images\imgout\social\picru.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="picru.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="62.607296"
+     inkscape:cy="335.27306"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:object-paths="false"
+     inkscape:snap-page="true"
+     inkscape:snap-bbox="true"
+     inkscape:object-nodes="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-others="true"
+     showguides="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-center="false"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:lockguides="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-smooth-nodes="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.00145496,0.25496008)">
+    <rect
+       style="opacity:0.73959997;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.10249335;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99521532"
+       id="rect869"
+       width="125.18463"
+       height="125.18463"
+       x="-0.0014562524"
+       y="-0.11153805" />
+    <path
+       style="opacity:1;fill:#c8b7b7;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.10249335;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99521532"
+       d="M 33.759584,1.845222 A 62.541065,62.541065 0 0 0 36.445388,89.809224 62.541065,62.541065 0 0 0 124.0137,88.333309 Z"
+       id="path819"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#e3dbdb;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.10249335;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99521532"
+       d="M 3.9237532,123.1264 123.95169,88.208071 A 62.541065,62.541065 0 0 0 123.6755,87.06863 62.541065,62.541065 0 0 0 45.962203,44.838697 62.541065,62.541065 0 0 0 3.7317722,122.55214 a 62.541065,62.541065 0 0 0 0.191981,0.57426 z"
+       id="path871"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.10249333;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99521532"
+       id="path823"
+       r="31.111971"
+       cy="88.836174"
+       cx="-53.781433"
+       transform="rotate(-75)" />
+    <circle
+       style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.10249335;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99521532"
+       id="path827"
+       cx="-53.781433"
+       cy="88.836174"
+       r="13.701636"
+       transform="rotate(-75)" />
+  </g>
+</svg>

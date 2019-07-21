@@ -13,7 +13,15 @@
 	<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
 	<link href="../css/mapstyle.css" type="text/css" rel="stylesheet">
-
+	<style>
+	.marker {
+	  background-image: url('../images/imgout/dronenologo.png');
+	  background-size: 100% 100%;
+	  width: 7%;
+	  height: 7%;
+	  cursor: pointer;
+	}
+	</style>
 	</head>
 	<body>
 	<!-- Logo Svg -->
@@ -45,7 +53,37 @@
 	<div id="content">	
 	<!-- Place your content here ↓-->
 	<input type="text" id="trackingNum" disabled />
-	<div id='map'></div>
+	<div id='message'></div>
+	<div id='map' style=" margin-left:5%; height: 450px;"></div>
+	<div class="footer">
+		<div class="footlogo">	
+		<img src="../images/imgout/logowtag.svg" onerror="this.onerror=null; this.src='../images/imgout/logowtag.png'">
+		</div>
+		<div class="footlinks">
+		<ul>
+		<li class="foottitle">Useful Links</li>
+		<li><a href="../pages/feedform.html" class="footlink" aria-label="Feedback Form">Feedback Us</a></li>
+		<li><a href="../pages/contactus.html" class="footlink"aria-label="Contact Us">Contact Us</a></li>
+		<li><a href="../pages/FAQ.html" class="footlink" aria-label="Frequently Asked Questions">Frequently Asked Questions</a></li>	
+		<li><a href="../pages/terms.html" class="footlink" aria-label="Terms of Use">Terms Of Use</a></li>	
+		</ul>
+		</div>
+		<div class="footlinks">
+		<ul>
+		<li class="foottitle">Follow Us</li>
+		<li><label for="grumblelink"><img src="../images/imgout/social/grumble.png"></label>
+		<a href="#" id="grumblelink" class="footlink">Follow Us on Grumble</a></li>
+		<li class="footlink"><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
+		<a href="#" id="picrulink" class="footlink">Follow Us on Picru</a></li>
+		<li class="footlink"><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
+		<a href="#" id="mimini" class="footlink">Follow Us on Mimini</a></li>
+		</ul>
+		</div>
+	</div>
+	<span class="cpright">
+		<img src="../images/imgout/logo.svg" onerror="this.onerror=null; this.src='../images/imgout/logo.png'">
+		<span>All Rights Reserved.</span>
+	</span>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
 	
@@ -124,20 +162,32 @@
 	
 	document.getElementById('trackingNum').value = trackval; 
 	
-	console.log(trackval);
-	console.log(typeof trackval);
-	
+	//Test Tracking Number
 	var term = trackval;
 	var re = new RegExp(/1[2-4]\d{5}103[6-9]\d{5}/);
 	if (re.test(term)) {
     //console.log("Valid");
 	
-	var coordinates = parseInt(trackval, 10);
-	console.log(coordinates)
-	console.log(typeof coordinates);
+	//Magic Conversion
+	var coordsX = trackval.replace(/1[2-4]\d{5}/, '').trim();
+	coordsX = coordsX/1000000;
+	console.log(coordsX);
+	
+	var coordsY = trackval.replace(/103[6-9]\d{5}/, '').trim();
+	coordsY = coordsY/1000000;
+	console.log(coordsY);
+	
+	
+	//Magic Location
+	var randcoordsX = (Math.random() * (103.9 - 103.6) + 103.6).toFixed(5);
+	console.log(randcoordsX);
+	
+	var randcoordsY = (Math.random() * (1.4 - 1.2) + 1.2).toFixed(5);
+	console.log(randcoordsY);
+	
 	
 	//Mapbox Api
-	/*mapboxgl.accessToken = 'pk.eyJ1IjoibXV4ZW50ZXJ0YWlubWVudCIsImEiOiJjanhzbzU1MXIwOXpxM29zYmJiYW9kZjV0In0.aWr37oefY1IT-MgzrJqqKw';
+	mapboxgl.accessToken = 'pk.eyJ1IjoibXV4ZW50ZXJ0YWlubWVudCIsImEiOiJjanhzbzU1MXIwOXpxM29zYmJiYW9kZjV0In0.aWr37oefY1IT-MgzrJqqKw';
 	var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/streets-v11',
@@ -146,51 +196,53 @@
 	maxZoom: 15,
 	minZoom: 10
 	});
-	// Drone Logo
-	map.on('load', function() {
-		map.loadImage('../images/imgout/dronenologo_thumb.png', 
-		function(error, image) {
-			if (error) throw error;
-			map.addImage('drone', image);
-			map.addLayer({
-			"id": "points",
-			"type": "symbol",
-			"source": {
-				"type": "geojson",
-				"data": {
-					"type": "FeatureCollection",
-					"features": [{
-						"type": "Feature",
-						"geometry": {
-							"type": "Point",
-							"coordinates": [coordsX, coordsY]
-							}
-						}]
-						}
-					},
-					"layout": {
-						"icon-image": "drone",
-						"icon-size": 0.25
-					}
-				});
-			});
-		});*/
-	}	
 	
-	else {
+	// Drone Logo on map
+	var geojson = {
+	  type: 'FeatureCollection',
+	  features: [
+	  {
+		type: 'Feature',
+		geometry: {
+		  type: 'Point',
+		  coordinates: [coordsX, coordsY]
+		},
+		properties: {
+			name: "Drop-Off Point"
+		}
+	  }]
+	};
+	geojson.features.forEach(function(marker) {
+
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    // make a marker for each feature and add it to the map
+    new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(new mapboxgl.Popup({offset: 25}) // add popups
+            .setHTML('<h3>' + marker.properties.name + '</h3>'))
+        .addTo(map);
+	});
+	
+	var packageInfo = document.getElementById('message');
+	packageInfo.setAttribute("class", "text");
+	packageInfo.setAttribute("style", "margin-left:5%");
+	packageInfo.innerHTML = "Your Package is on the way. <br /> You will receive a message when your package is about to reach drop-off point. <br /> Please wait at the drop-off point when the drone arrives.";
+	}
+	else {	
+	//Tells user that there is no package.
 	var trackingNum = document.getElementById("trackingNum");
 	var packageInfo = document.createElement("p");
 	packageInfo.setAttribute("class", "text");
 	packageInfo.innerHTML = "Package not found." + "<br>" + "Please check tracking number."+ "<br>" +" Your tracking number is: " + "<b>" + trackval + "</b>";
 	trackingNum.parentNode.replaceChild(packageInfo, trackingNum);
-	}
-	
+	//Remove Map
 	var map = document.getElementById('map');
 	map.remove();
 	}
-	
-	
-	//Mapbox access api
+	}
 	
 	</script>
 </html>
