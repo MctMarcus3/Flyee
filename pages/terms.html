@@ -8,20 +8,8 @@
 	<!-- <base href="./" target="_blank"> -->
 	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
 	<link href="../css/style.css" type="text/css" rel="stylesheet">
-	<link href="../css/home.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<script src='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' />
-	<link href="../css/mapstyle.css" type="text/css" rel="stylesheet">
-	<style>
-	.marker {
-	  background-image: url('../images/imgout/dronenologo.png');
-	  background-size: 100% 100%;
-	  width: 7%;
-	  height: 7%;
-	  cursor: pointer;
-	}
-	</style>
+	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
 	</head>
 	<body>
 	<!-- Logo Svg -->
@@ -50,12 +38,26 @@
 					</li>
 				</ul>
 			</nav>
-	<div id="content">	
+	<div id="content">
+	<div class="text">
 	<!-- Place your content here ↓-->
-	<input type="text" id="trackingNum" disabled />
-	<div id='message'></div>
-	<div id='map' style=" margin-left:5%; height: 450px;"></div>
-	
+		<h1 align="center">Terms of Service</h1>
+		<h2>Welcome to Flyee</h2>
+		<p>These terms and conditions outline the rules and regulations for the use of Flyee's Website.</p>
+		<p>By accessing this website we assume you accept these terms and conditions in full. Do not continue to use Flyee's website 
+		if you do not accept all of the terms and conditions stated on this page.</p>
+		
+		<h2>Cookies</h2>
+		<p>We employ the use of cookies. By using Flyee's website you consent to the use of cookies 
+		in accordance with Flyee's privacy policy.</p><p>Most of the modern day interactive web sites
+		use cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our site
+		to enable the functionality of this area and ease of use for those people visiting.</p>
+		
+		<h2>Disclaimer</h2>
+		<p>This website is purely fictional. Any names, logos, business, places, events or incidents are ficticious.
+		Any resemblance to any actual person, living or dead, or actual events is purely coincidental.</p><p>For Educational Use Only. 
+		Do not copy our homework. Do it yourself, We know you can do it.</p>
+	</div>
 	<!-- Footer of Website -->
 	<div class="footer">
 		<div class="footlogo">	
@@ -86,10 +88,9 @@
 		<img src="../images/imgout/logo.svg" onerror="this.onerror=null; this.src='../images/imgout/logo.png'">
 		<span>All Rights Reserved.</span>
 	</span>
-	<!-- Prevents Scrolling of Content when menu is opened -->
-	</div>
 	
-	</body>
+	</div>
+	<!-- Prevents Scrolling of Content when menu is opened -->
 	<script>
 	//Menu Check
 	function menuChecked(){
@@ -141,110 +142,7 @@
 	}
 
 	toggleSwitch.addEventListener('change', switchTheme, false);
-	
-	//Parse Url Variable
-	window.onload = function(){
-	var body = document.getElementsByTagName('body')[0];
-	function parseURLParam(param) 
-	{
-		//USAGE: var PageName = parseURLParam('page')
-		var fullURL = window.location.search.substring(1);
-		var paramArray = fullURL.split('&');
-		for (var i = 0; i < paramArray.length; i++)
-		{
-			var currParam = paramArray[i].split('=');
-			if (currParam[0] == param)
-			{
-				return currParam[1];
-			}
-		}
-	}
-	
-	var trackval = parseURLParam('tracknum');
-	
-	document.getElementById('trackingNum').value = trackval; 
-	
-	//Test Tracking Number
-	var term = trackval;
-	var re = new RegExp(/1[2-4]\d{5}103[6-9]\d{5}/);
-	if (re.test(term)) {
-    //console.log("Valid");
-	
-	//Magic Conversion
-	var coordsX = trackval.replace(/1[2-4]\d{5}/, '').trim();
-	coordsX = coordsX/1000000;
-	console.log(coordsX);
-	
-	var coordsY = trackval.replace(/103[6-9]\d{5}/, '').trim();
-	coordsY = coordsY/1000000;
-	console.log(coordsY);
-	
-	
-	//Magic Location
-	var randcoordsX = (Math.random() * (103.9 - 103.6) + 103.6).toFixed(5);
-	console.log(randcoordsX);
-	
-	var randcoordsY = (Math.random() * (1.4 - 1.2) + 1.2).toFixed(5);
-	console.log(randcoordsY);
-	
-	
-	//Mapbox Api
-	mapboxgl.accessToken = 'pk.eyJ1IjoibXV4ZW50ZXJ0YWlubWVudCIsImEiOiJjanhzbzU1MXIwOXpxM29zYmJiYW9kZjV0In0.aWr37oefY1IT-MgzrJqqKw';
-	var map = new mapboxgl.Map({
-	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v11',
-	center: [103.824885, 1.354969],
-	zoom: 10,
-	maxZoom: 15,
-	minZoom: 10
-	});
-	
-	// Drone Logo on map
-	var geojson = {
-	  type: 'FeatureCollection',
-	  features: [
-	  {
-		type: 'Feature',
-		geometry: {
-		  type: 'Point',
-		  coordinates: [coordsX, coordsY]
-		},
-		properties: {
-			name: "Drop-Off Point"
-		}
-	  }]
-	};
-	geojson.features.forEach(function(marker) {
+</script>
+	</body>
 
-    // create a HTML element for each feature
-    var el = document.createElement('div');
-    el.className = 'marker';
-
-    // make a marker for each feature and add it to the map
-    new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({offset: 25}) // add popups
-            .setHTML('<h3>' + marker.properties.name + '</h3>'))
-        .addTo(map);
-	});
-	
-	var packageInfo = document.getElementById('message');
-	packageInfo.setAttribute("class", "text");
-	packageInfo.setAttribute("style", "margin-left:5%");
-	packageInfo.innerHTML = "Your Package is on the way. <br /> You will receive a message when your package is about to reach drop-off point. <br /> Please wait at the drop-off point when the drone arrives.";
-	}
-	else {	
-	//Tells user that there is no package.
-	var trackingNum = document.getElementById("trackingNum");
-	var packageInfo = document.createElement("p");
-	packageInfo.setAttribute("class", "text");
-	packageInfo.innerHTML = "Package not found." + "<br>" + "Please check tracking number."+ "<br>" +" Your tracking number is: " + "<b>" + trackval + "</b>";
-	trackingNum.parentNode.replaceChild(packageInfo, trackingNum);
-	//Remove Map
-	var map = document.getElementById('map');
-	map.remove();
-	}
-	}
-	
-	</script>
 </html>
