@@ -54,6 +54,10 @@
 	flex-wrap: wrap;
 }
 
+.track-title{
+	padding-left:10px;
+}
+
 .trackno{
 	flex:1 1 100%;
 	margin:10px 0px 0px 0px;
@@ -68,7 +72,7 @@
 }
 
 .news-part{
-	padding:10px 0;
+	padding:10px 10px;
 }
 
 .news-part-title{

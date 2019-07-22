@@ -169,6 +169,15 @@
 	height:12.5%;
 	}
 	
+	.reviews{
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
+	}
+	
+	.card1{
+		width: 80%;
+	}
 }
 
 /* Large devices (laptops/desktops, 1000px and up) */
@@ -250,6 +259,18 @@
 	width:5%;
 	height:5%;
 	}
+	
+	.reviews{
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:center;
+		flex:1 1 100%;
+	}
+	
+	.card1{
+		width: 35%;
+	}
+	
 }
 /* 4K screens and below */
 @media only screen and (max-width: 2560px){
@@ -436,15 +457,24 @@ input:checked + .slider:before {
 }
 
 	
-
-/* Reviews css */
+/* Card Design for every other page */
 .card {
 	box-shadow: 0 4px 8px 0 var(--font-color);
 	transition: 0.3s;
 	width: 70%;
 	border-radius: 10px;
 	margin: 30px auto;
+	padding: 30px;	
+}
+
+/* Reviews css */
+.card1 {
+	box-shadow: 0 4px 8px 0 var(--font-color);
+	transition: 0.3s;
+	border-radius: 10px;
 	padding: 30px;
+	margin-top: 20px;
+	
 }
 
 .checked {
@@ -458,7 +488,7 @@ input:checked + .slider:before {
 
 /* Home Sections */
 .section{
-	padding: 15px 0px;
+	padding: 15px 5px;
 	margin: 30px auto;
 	box-shadow: 0 4px 8px 0 var(--font-color);
 	transition: 0.3s;
@@ -467,7 +497,7 @@ input:checked + .slider:before {
 }
 
 .section-title{
-	padding:15px 5px 15px 0px;
+	padding:15px 10px;
 	font-size:2em;
 	font-weight:bolder;
 }
