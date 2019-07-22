@@ -257,6 +257,7 @@
 	input[type=number],
 	input[type=email],
 	input[type=textarea]{
+	width: 60%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	}
