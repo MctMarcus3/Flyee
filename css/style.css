@@ -558,7 +558,7 @@ input[type="number"] {
 	color: var(--heading-color);
 }
 .footlink:visited {
-	color: var(--secondary-color);
+	color: var(--heading-color);
 }
 
 .foottitle{
