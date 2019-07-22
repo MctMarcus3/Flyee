@@ -42,7 +42,7 @@
 	<div id="content">
 	<!-- Place your content here ↓-->
 	<div class="text">
-	<form action="submit.html" method="post">
+	<form action="submit.html">
 	<div class="nametitle">Feedback Form</div>
 	<p>Thank you for taking the time to fill in our online feedback form. By providing us your feedback, you are helping us understand what we do well and what improvements we need to implement.</p>
 		<div class="feedback">
@@ -66,7 +66,8 @@
 					minlength="16"
 					maxlength="16"
 					title="Please check if the tracking number is 16 digits" 
-					placeholder="1249418002840113" 
+					placeholder="1249418002840113"
+					pattern="1\d{15}" 					
 					required />
 				</div>
 			</div>
