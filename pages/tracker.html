@@ -45,17 +45,17 @@
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="navButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Light Mode!</em>
 					</div>
 					</li>
 				</ul>
 			</nav>
 	<div id="content">	
 	<!-- Place your content here ↓-->
-	<input type="text" id="trackingNum" disabled />
+	<div class="nametitle">Tracker</div>
 	<div id='message'></div>
 	<div id='map' style=" margin-left:5%; height: 450px;"></div>
-	
+	<br />
 	<!-- Footer of Website -->
 	<div class="footer">
 		<div class="footlogo">	
@@ -162,7 +162,7 @@
 	
 	var trackval = parseURLParam('tracknum');
 	
-	document.getElementById('trackingNum').value = trackval; 
+	//document.getElementById('trackingNum').value = trackval; 
 	
 	//Test Tracking Number
 	var term = trackval;
@@ -231,7 +231,7 @@
 	var packageInfo = document.getElementById('message');
 	packageInfo.setAttribute("class", "text");
 	packageInfo.setAttribute("style", "margin-left:5%");
-	packageInfo.innerHTML = "Your Package is on the way. <br /> You will receive a message when your package is about to reach drop-off point. <br /> Please wait at the drop-off point when the drone arrives.";
+	packageInfo.innerHTML = "Your Package is on the way. <br /> You will receive a message when your package is about to reach drop-off point. <br /> Please wait at the drop-off point when the drone arrives. <br /> Your tracking number is: " + "<b>" + trackval + "</b>";
 	}
 	else {	
 	//Tells user that there is no package.

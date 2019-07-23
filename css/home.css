@@ -19,6 +19,8 @@
 	/* Width = 100%/no. of images */
 }
 
+
+
 @keyframes slider {
 	0% {
 		left:0;
@@ -48,6 +50,12 @@
 
 /* Home Sections is in all the different style.css */
 
+@media only screen and (min-width: 1000px){
+	.news-part{
+	width:35%;
+	}	
+}
+
 /* Tracking Number*/
 .track{
 	display:flex; 
@@ -64,15 +72,16 @@
 	text-align:center;
 }
 
-.
 /* News */
 .news{
-	display:flex;	
+	display:flex;
 	flex-wrap:wrap;
+	justify-content:left;
 }
 
 .news-part{
 	padding:10px 10px;
+
 }
 
 .news-part-title{
@@ -81,5 +90,5 @@
 }
 
 .news-part img{
-	width:30%;
+	width:35%;
 }

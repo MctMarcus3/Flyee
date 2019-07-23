@@ -43,7 +43,17 @@
 	font-weight: 400;
 	transition: 200ms;
 	}
-
+	
+	.themeButton {
+	text-decoration: none;
+	color:var(--primary-color);
+	opacity:1;
+	font-family: 'work sans', sans serif;
+	font-size: 1.2em;
+	font-weight: 400;
+	transition: 200ms;
+	}
+	
 	.navButton:hover {
 	opacity:0.2;
 	}
@@ -205,6 +215,18 @@
 	color:var(--primary-color);
 	font-family: 'work sans', sans serif;
 	font-size: 1.5em;
+	font-weight: 400;
+	transition: 200ms;
+	text-align: center;
+	justify-content: center;
+	}
+	
+	.themeButton{
+	display:flex;
+	text-decoration: none;
+	color:var(--primary-color);
+	font-family: 'work sans', sans serif;
+	font-size: 1.2em;
 	font-weight: 400;
 	transition: 200ms;
 	text-align: center;
