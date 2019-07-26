@@ -1,9 +1,9 @@
 :root{
-	--primary-color: #C9C9C9; 
-    --secondary-color: #A9A9A9; 
-    --font-color: #696969; 
-    --bg-color: #121212; 
-    --heading-color: #EAEAEA; 
+	--primary-color: #F7F7F7; 
+    --secondary-color: #1098F7; 
+    --font-color: #26343D; 
+    --bg-color: #1B1B1B; 
+    --heading-color: #AEB7B3; 
 }
 
 [data-theme="light"]{

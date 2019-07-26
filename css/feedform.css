@@ -149,6 +149,16 @@
 	flex-wrap: wrap;
 }
 
+.smalldetails{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+.smalldetails > .sub{
+	margin-left: auto;
+}
+
 /* Star Rating */
 .rate{
 	direction:rtl;
