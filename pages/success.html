@@ -9,7 +9,7 @@
 	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
 	<link href="../css/style.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<link href="../css/feedform.css" type="text/css" rel="stylesheet"> 
+	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
 	</head>
 	<body>
 	<!-- Logo Svg -->
@@ -42,34 +42,12 @@
 		</div>
 	<div id="content">
 	<!-- Place your content here ↓-->
-	<div class="text">
-	<div class="card">
-	<form action="success.html" method="get">
 	<h1 align="center">Contact Us</h1>
-		<div class="feedback">
-			<div class="sub1">
-				<div><label for="name">Name:</label></div>
-				<div class="selections2"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
-				<br />
-			</div>
-			<div class="sub1">
-				<div><label for="email">Email:</label></div>
-				<div class="selections2"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
-				<br />
-			</div>
-			<div>
-				<p class="comments">Comments:</p>
-				<br />
-				<div class="selections2"><textarea rows="8" cols="30" name="contactMessage" placeholder="Enter your message here"></textarea></div>
-			</div>
-		</div>
-		<div style="text-align:center;">
-		<!-- <input type="button" onclick="location.href='submit_og.html';" value="Submit"/> -->
-		<input type="submit" value="Submit" />
-		</div>
-	</form>
-	</div>
-	</div>
+	<p align="center">
+	We have received your message.
+	<br/>
+	-Flyee Inc
+	<p>
 	<!-- Footer of Website -->
 	<div class="footer">
 		<div class="footlogo">	
@@ -100,10 +78,10 @@
 		<img src="../images/imgout/logo.svg" onerror="this.onerror=null; this.src='../images/imgout/logo.png'">
 		<span>All Rights Reserved.</span>
 	</span>
-	</div>
 	<!-- Prevents Scrolling of Content when menu is opened -->
+	</div>
 	<script>
-	//Menu Check
+	//Menu Check	 
 	function menuChecked(){
 		var checkbox = document.getElementById("menuButton");
 		var content = document.getElementById("content");
@@ -112,7 +90,7 @@
 		} else {
 			content.style.display = "block";
 		}
-	}
+	}	
 	//Media check
 	function mediaCheck(mediapx) {
 	if (mediapx.matches) { // If media query matches
@@ -123,11 +101,11 @@
 	content.style.display = "block";
 	}
 	}
-
+	
 	var mediapx = window.matchMedia("(max-width: 914px)")
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
-
+	
 	//Theme switcher
 	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 	const currentTheme = localStorage.getItem('theme');
@@ -155,5 +133,5 @@
 	toggleSwitch.addEventListener('change', switchTheme, false);
 </script>
 	</body>
-
+  
 </html>
