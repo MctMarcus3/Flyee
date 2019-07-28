@@ -18,7 +18,7 @@
 		<div class="content">
 			<nav role="navigation">
 				<div id="menuToggle">
-				<input type="checkbox" id="menuButton" onclick="menuChecked()"/>
+				<input type="checkbox" id="menuButton" onclick="menuChecked()" />
 				<span></span>
 				<span></span>
 				<span></span>
@@ -33,7 +33,7 @@
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="themeButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Dark Mode!</em>
 					</div>
 					</li>
 				</ul>
@@ -300,20 +300,20 @@
 	if (currentTheme) {
 	document.documentElement.setAttribute('data-theme', currentTheme);
 
-	if (currentTheme === 'light') {
+	if (currentTheme === 'dark') {
 	toggleSwitch.checked = true;
 	}
 	}
 
 	function switchTheme(e) {
 	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
-	}
-		
-	else {
 	document.documentElement.setAttribute('data-theme', 'dark');
 	localStorage.setItem('theme', 'dark');
+	}
+    
+	else {
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
 	}
 	}
 

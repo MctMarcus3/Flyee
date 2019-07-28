@@ -1,0 +1,24 @@
+.colors > div {
+	padding:10px;
+}
+.color1{
+	background-color:var(--bg-color)
+}
+.color2{
+	background-color:var(--heading-color)
+}
+.color3{
+	background-color:var(--font-color)
+}
+.color4{
+	background-color:var(--primary-color)
+}
+.color5{
+	background-color:var(--secondary-color)
+}
+.color6{
+	background-color:var(--nav-color)
+}
+.color7{
+	background-color:var(--inverted-color)
+}

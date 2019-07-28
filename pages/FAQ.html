@@ -33,56 +33,86 @@
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="themeButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Dark Mode!</em>
 					</div>
 					</li>
 				</ul>
+				</div>
 			</nav>
 		</div>
 	<div id="content">
 	<!-- Place your content here ↓-->
 	<div id="top"class="text">
 	<div class="nametitle">Frequently Asked Questions</div>
-	
+	<div class="collapsible">
 	<h2>Where does Flyee serve currently?</h2>
 		<p>We are currently on trial serving in Singapore only.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>
+	
+	<div class="collapsible">
 	<h2>What time does the Flyee Drones operate?</h2>
 		<p>The Flyee drones operate between 0800AM to 0600PM.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>
+	
+	<div class="collapsible">
 	<h2>Where is my package?</h2>
 		<p>It is on its way to you.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>
+	
+	<div class="collapsible">
 	<h2>How long does it take to reach me?</h2>
 		<p>You will receive a message when the drone is about to arrive to the drop off point.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>
+	
+	<div class="collapsible">
 	<h2>When can I collect my package?</h2>
 		<p>You can collect your package when the drone arrives.<p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>Where can I collect my package?</h2>
 		<p>You can collect your package at the drop off point.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>What happens if it rains?</h2>
 		<p>Your package would be delivered after the rain stops.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>How to collect my package?</h2>
 		<p>Be at the drop off point.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>How to cancel an order?</h2>
 		<p>Please contact us by pressing the contact us button at the footer.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>Are there any charges for canceling an order?</h2>
 		<p>There is a SGD$5 Dollars canceling charge for every order canceled.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>Are there any bulk delivery discounts?</h2>
 		<p>Please check the news page for current promotions.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>Are there any corporate programs?</h2>
 		<p>There are currently no corporate programs.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>	
+	<div class="collapsible">
 	<h2>I have entered the correct package number, and it still says package not found.</h2>
 		<p>Please contact us by pressing the contact us button at the footer.</p>
 		<a href="#top" class="footlink">Fly to Top</a>
+	</div>
 	</div>
 	<!-- Footer of Website -->
 	<div class="footer">
@@ -103,9 +133,9 @@
 		<li class="foottitle">Follow Us</li>
 		<li><label for="grumblelink"><img src="../images/imgout/social/grumble.png"></label>
 		<a href="#" id="grumblelink" class="footlink">Follow Us on Grumble</a></li>
-		<li class="footlink"><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
+		<li><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
 		<a href="#" id="picrulink" class="footlink">Follow Us on Picru</a></li>
-		<li class="footlink"><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
+		<li><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
 		<a href="#" id="mimini" class="footlink">Follow Us on Mimini</a></li>
 		</ul>
 		</div>
@@ -149,25 +179,26 @@
 	if (currentTheme) {
 	document.documentElement.setAttribute('data-theme', currentTheme);
 
-	if (currentTheme === 'light') {
+	if (currentTheme === 'dark') {
 	toggleSwitch.checked = true;
 	}
 	}
 
 	function switchTheme(e) {
 	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
 	}
     
 	else {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
 	}
 	}
 
 	toggleSwitch.addEventListener('change', switchTheme, false);
-</script>
+	
+	</script>
 	</body>
 
 </html>

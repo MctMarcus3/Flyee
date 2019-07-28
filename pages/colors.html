@@ -8,8 +8,9 @@
 	<!-- <base href="./" target="_blank"> -->
 	<link href="../favicon.ico" rel="icon" type="image/ico" sizes="16x16">
 	<link href="../css/style.css" type="text/css" rel="stylesheet">
+	<link href="../css/colorful.css" type="text/css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" type="text/css" rel="stylesheet">
-	<link href="../css/feedform.css" type="text/css" rel="stylesheet"> 
+	<!-- <link href="location to your css" type="text/css" rel="stylesheet"> -->
 	</head>
 	<body>
 	<!-- Logo Svg -->
@@ -42,33 +43,14 @@
 		</div>
 	<div id="content">
 	<!-- Place your content here ↓-->
-	<div class="text">
-	<div class="card">
-	<form action="submit.html" method="post">
-	<h1 align="center">Contact Us</h1>
-		<div class="feedback">
-			<div class="sub1">
-				<div><label for="name">Name:</label></div>
-				<div class="selections2"><input type="text" name="name" id="name" placeholder="John Doe" required></div>
-				<br />
-			</div>
-			<div class="sub1">
-				<div><label for="email">Email:</label></div>
-				<div class="selections2"><input type="email" name="email" id="email" placeholder="email@example.com" required></div>
-				<br />
-			</div>
-			<div>
-				<p class="comments">Comments:</p>
-				<br />
-				<div class="selections2"><textarea rows="8" cols="30" name="contactMessage" placeholder="Enter your message here"></textarea></div>
-			</div>
-		</div>
-		<div style="text-align:center;">
-		<!-- <input type="button" onclick="location.href='submit_og.html';" value="Submit"/> -->
-		<input type="submit" value="Submit" />
-		</div>
-	</form>
-	</div>
+	<div class="colors" style="display:flex; justify-content:space-evenly;"> 
+	<div class="color1">Background</div>
+	<div class="color2">Heading</div>
+	<div class="color3">Font</div>
+	<div class="color4">Primary</div>
+	<div class="color5">Secondary</div>
+	<div class="color6">Navigation</div>
+	<div class="color7">Inverted</div>
 	</div>
 	<!-- Footer of Website -->
 	<div class="footer">
@@ -89,9 +71,9 @@
 		<li class="foottitle">Follow Us</li>
 		<li><label for="grumblelink"><img src="../images/imgout/social/grumble.png"></label>
 		<a href="#" id="grumblelink" class="footlink">Follow Us on Grumble</a></li>
-		<li class="footlink"><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
+		<li><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
 		<a href="#" id="picrulink" class="footlink">Follow Us on Picru</a></li>
-		<li class="footlink"><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
+		<li><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
 		<a href="#" id="mimini" class="footlink">Follow Us on Mimini</a></li>
 		</ul>
 		</div>

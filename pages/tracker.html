@@ -35,21 +35,23 @@
 				<span></span>
 				<span></span>
 				<ul class="menu">
-					<li><a class="navButton" href="home.html">Home</a></li>
-					<li><a class="navButton" href="story.html">About Us</a></li>
-					<li><a class="navButton" href="reviews.html">Reviews</a></li>
-					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
-					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
+					<li><a class="navButton" aria-label="Home" href="home.html">Home</a></li>
+					<li><a class="navButton" aria-label="About Us" href="story.html">About Us</a></li>
+					<li><a class="navButton" aria-label="Our Reviews" href="reviews.html">Reviews</a></li>
+					<li><a class="navButton" aria-label="Package Pricing" href="packagepricing.html">Package Pricing</a></li>
+					<li><a class="navButton" aria-label="Feedback Us" href="feedform.html">Feedback Us</a></li>
 					<li><div class="theme-switch-wrapper">
 					<label class="theme-switch" for="themebox">
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="themeButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Dark Mode!</em>
 					</div>
 					</li>
 				</ul>
+				</div>
 			</nav>
+		</div>
 	<div id="content">
 	<div class="nametitle">Tracker</div>
 	<!-- Place your content here ↓-->
@@ -124,20 +126,20 @@
 	if (currentTheme) {
 	document.documentElement.setAttribute('data-theme', currentTheme);
 
-	if (currentTheme === 'light') {
+	if (currentTheme === 'dark') {
 	toggleSwitch.checked = true;
 	}
 	}
 
 	function switchTheme(e) {
 	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
 	}
     
 	else {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
 	}
 	}
 

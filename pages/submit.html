@@ -33,12 +33,13 @@
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="themeButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Dark Mode!</em>
 					</div>
 					</li>
 				</ul>
 				</div>
 			</nav>
+		</div>
 	<div id="content">
 	<!-- Place your content here ↓-->
 	<h1 align="center">Feedback Form</h1>
@@ -105,24 +106,28 @@
 	mediaCheck(mediapx) // Call listener function at run time
 	mediapx.addListener(mediaCheck) // Attach listener function on state changes
 	
-	//Theme switcher 
+	//Theme switcher
 	const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 	const currentTheme = localStorage.getItem('theme');
-	
-	if (currentTheme === 'light') {
-        toggleSwitch.checked = false;
-    }
-	
-	
+
+	if (currentTheme) {
+	document.documentElement.setAttribute('data-theme', currentTheme);
+
+	if (currentTheme === 'dark') {
+	toggleSwitch.checked = true;
+	}
+	}
+
 	function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-		localStorage.setItem('theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-		localStorage.setItem('theme', 'light');
-    }    
+	if (e.target.checked) {
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
+	}
+    
+	else {
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
+	}
 	}
 
 	toggleSwitch.addEventListener('change', switchTheme, false);

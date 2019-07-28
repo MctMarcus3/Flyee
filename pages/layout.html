@@ -33,17 +33,18 @@
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="themeButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Dark Mode!</em>
 					</div>
 					</li>
 				</ul>
 				</div>
 			</nav>
+		</div>
 	<div id="content">
 	<!-- Place your content here ↓-->
 
 	<!-- Footer of Website -->
-	<div class="footer">
+<div class="footer">
 		<div class="footlogo">	
 		<img src="../images/imgout/logowtag.svg" onerror="this.onerror=null; this.src='../images/imgout/logowtag.png'">
 		</div>
@@ -61,9 +62,9 @@
 		<li class="foottitle">Follow Us</li>
 		<li><label for="grumblelink"><img src="../images/imgout/social/grumble.png"></label>
 		<a href="#" id="grumblelink" class="footlink">Follow Us on Grumble</a></li>
-		<li class="footlink"><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
+		<li><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
 		<a href="#" id="picrulink" class="footlink">Follow Us on Picru</a></li>
-		<li class="footlink"><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
+		<li><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
 		<a href="#" id="mimini" class="footlink">Follow Us on Mimini</a></li>
 		</ul>
 		</div>
@@ -107,20 +108,20 @@
 	if (currentTheme) {
 	document.documentElement.setAttribute('data-theme', currentTheme);
 
-	if (currentTheme === 'light') {
+	if (currentTheme === 'dark') {
 	toggleSwitch.checked = true;
 	}
 	}
 
 	function switchTheme(e) {
 	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
 	}
     
 	else {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
 	}
 	}
 

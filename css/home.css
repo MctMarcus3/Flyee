@@ -84,9 +84,18 @@
 
 }
 
+.news-part a:link{
+	color:var(--primary-color);
+}
+
+.news-part a:hover,.news-part a:visited{
+	color:var(--secondary-color);
+	opacity:0.2;
+}
 .news-part-title{
 	font-size:1.7em;
 	font-weight:bolder;
+	color:var(--heading-color);
 }
 
 .news-part img{

@@ -13,7 +13,7 @@
 	justify-content:space-between;
 	align-items:center;
 	border: 1px solid var(--font-color);
-	padding: 10px 10px;
+	padding: 10px 10px;	
 }
 
 .div-table{
@@ -48,7 +48,7 @@
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: (--font-color);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -70,12 +70,12 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color:  var(--secondary-color);
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: var(--font-color);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -86,7 +86,7 @@
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: var(--font-color);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -99,14 +99,14 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--font-color);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color:  var(--primary-color);
 }
 
 /* Fading animation */
