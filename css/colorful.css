@@ -1,24 +1,40 @@
-.colors > div {
-	padding:10px;
+:root{
+    --font-invert: #000000;
 }
-.color1{
-	background-color:var(--bg-color)
+
+[data-theme="dark"]{
+    --font-invert: #FFFFFF;
 }
-.color2{
-	background-color:var(--heading-color)
+
+.colors > div{
+	display:flex;
+	color:var(--font-invert);
 }
-.color3{
-	background-color:var(--font-color)
+.background{
+	background-color:var(--bg-color);
+	color:var(--font-invert);
 }
-.color4{
-	background-color:var(--primary-color)
+.heading{
+	background-color:var(--heading-color);
+	color:var(--font-invert);
 }
-.color5{
-	background-color:var(--secondary-color)
+.font{
+	background-color:var(--font-color);
+	color:var(--font-invert);
 }
-.color6{
-	background-color:var(--nav-color)
+.primary{
+	background-color:var(--primary-color);
+	color:var(--font-invert);
 }
-.color7{
-	background-color:var(--inverted-color)
+.secondary{
+	background-color:var(--secondary-color);
+	color:var(--font-invert);
+}
+.navigation{
+	background-color:var(--nav-color);
+	color:var(--font-invert);
+}
+@media only screen and (max-width: 1000px){
+.colors > div  {
+    width: 80%;
 }
