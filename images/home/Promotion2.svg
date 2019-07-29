@@ -13,7 +13,7 @@
    id="svg1955"
    width="1e3"
    height="300"
-   inkscape:export-filename="C:\Users\Marcus T\Desktop\Xampp\htdocs\Web_Publishing\Flyee\images\home\Promotion2.png"
+   inkscape:export-filename="C:\Users\Marcus T\Desktop\Xampp\htdocs\Flyee\images\home\Promotion2.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -21,18 +21,40 @@
    version="1.1"
    viewBox="0 0 264.58 79.375">
   <defs
-     id="defs13" />
+     id="defs13">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient865">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop861" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:0;"
+         offset="1"
+         id="stop863" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient865"
+       id="linearGradient867"
+       x1="129.49876"
+       y1="217.62"
+       x2="129.49876"
+       y2="296.16818"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:bbox-nodes="true"
      inkscape:current-layer="layer1"
-     inkscape:cx="749.81131"
-     inkscape:cy="-31.326091"
+     inkscape:cx="562.94671"
+     inkscape:cy="158.18126"
      inkscape:document-units="mm"
      inkscape:guide-bbox="true"
-     inkscape:pagecheckerboard="false"
+     inkscape:pagecheckerboard="true"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:snap-bbox="true"
@@ -42,11 +64,11 @@
      inkscape:window-width="1920"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
-     inkscape:zoom="1.28"
-     pagecolor="#726f78"
+     inkscape:zoom="0.64"
+     pagecolor="#ffffff"
      showgrid="false"
      showguides="true"
-     units="px">
+     units="in">
     <sodipodi:guide
        id="guide3300"
        inkscape:locked="false"
@@ -71,7 +93,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -80,6 +102,13 @@
      transform="translate(0 -217.62)"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
+    <rect
+       style="opacity:1;fill:url(#linearGradient867);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.10249338;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99521532"
+       id="rect2483"
+       width="264.58337"
+       height="79.375008"
+       x="-0.0016666667"
+       y="217.62" />
     <text
        id="text3298"
        transform="scale(1.00012,0.99988001)"
@@ -94,7 +123,7 @@
          x="9.0333042"
          y="233.81816"
          sodipodi:role="line"
-         style="font-family:Futura-Bold;fill:#000000;stroke-width:0.26457471">New Opening Promotion </tspan></text>
+         style="font-family:Futura-Bold;fill:#000000;stroke-width:0.26457471">National Day Promotion </tspan></text>
     <path
        style="opacity:0.79000005;fill:#36baed;stroke:#000000;stroke-width:0.10249335"
        inkscape:connector-curvature="0"
@@ -110,7 +139,7 @@
          x="9.0933847"
          y="251.49167"
          style="stroke-width:0.26458332"
-         id="tspan1189">From 30 June 2019 - 14 July 2019</tspan></text>
+         id="tspan1189">From 1 August 2019 - 31 August 2019</tspan></text>
     <image
        style="stroke-width:1.61916101"
        width="41.679104"
@@ -167,14 +196,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.31697273px;line-height:1.25;font-family:Equinox;-inkscape-font-specification:Equinox;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="204.20335"
-       y="257.27774"
+       x="220.36566"
+       y="260.20099"
        id="text832"><tspan
          sodipodi:role="line"
-         x="204.20335"
-         y="257.27774"
+         x="220.36566"
+         y="260.20099"
          style="stroke-width:0.26458332"
-         id="tspan834">#FLYEE</tspan></text>
+         id="tspan834">#NDP19</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Equinox;-inkscape-font-specification:Equinox;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -185,7 +214,7 @@
          id="tspan838"
          x="72.386681"
          y="267.01978"
-         style="stroke-width:0.26458332">#FLYEE</tspan></text>
+         style="stroke-width:0.26458332">#Ndp19</tspan></text>
     <text
        id="text854"
        y="277.5755"
@@ -196,7 +225,7 @@
          y="277.5755"
          x="9.7755136"
          sodipodi:role="line"
-         id="tspan860">for 15% discount</tspan></text>
+         id="tspan860">for 54% discount</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Equinox;-inkscape-font-specification:Equinox;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
