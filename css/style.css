@@ -420,12 +420,11 @@
 	height:30px;
 	}
 }
-html{
-	overflow-x: hidden;
-	height: 100%;
-}
+
 html, body {
 	background-color: var(--bg-color);
+	overflow-x: hidden;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
