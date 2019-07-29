@@ -13,7 +13,7 @@
 	</head>
 	<body>
 	<!-- Logo Svg -->
-	<img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo">
+	<a href="../pages/home.html"><img src="../images/imgout/dronesidelogo.svg" onerror="this.onerror=null; this.src='../images/imgout/dronesidelogo.png'" id="logo"></a>
 	<!-- Navigation Bar -->
 		<div class="content">
 			<nav role="navigation">
@@ -23,24 +23,27 @@
 				<span></span>
 				<span></span>
 				<ul class="menu">
-					<li><a class="navButton" href="home.html">Home</a></li>
-					<li><a class="navButton" href="story.html">About Us</a></li>
-					<li><a class="navButton" href="reviews.html">Reviews</a></li>
-					<li><a class="navButton" href="packagepricing.html">Package Pricing</a></li>
-					<li><a class="navButton" href="feedform.html">Feedback Us</a></li>
+					<li><a class="navButton" aria-label="Home" href="home.html">Home</a></li>
+					<li><a class="navButton" aria-label="About Us" href="story.html">About Us</a></li>
+					<li><a class="navButton" aria-label="Our Reviews" href="reviews.html">Reviews</a></li>
+					<li><a class="navButton" aria-label="Package Pricing" href="packagepricing.html">Package Pricing</a></li>
+					<li><a class="navButton" aria-label="Feedback Us" href="feedform.html">Feedback Us</a></li>
 					<li><div class="theme-switch-wrapper">
 					<label class="theme-switch" for="themebox">
 					<input type="checkbox" id="themebox" />
 					<div class="slider round"></div>
 					</label>
-					<label class="navButton" for="themebox">Enable Light Mode!</em>
+					<label class="themeButton" for="themebox">Enable Dark Mode!</em>
 					</div>
 					</li>
 				</ul>
+				</div>
 			</nav>
+		</div>
 	<div id="content">
 	<!-- Place your content here ↓-->
 		<div class="nametitle">About Us</div>
+		
 		
 		<div class="text">
 		<p>We are a group of students who are advertising our delivery system based on drones.</p>
@@ -48,6 +51,71 @@
 		<p>You can get your packages delivered right to your doorstep without needing the postman coming straight up to your door and having to sign for it but rather have a drone which drops the package outside of your door, you pick it up and release the drone.</p>
 		<p>And there you go! Package delivered!</p>	
 		</div>
+		
+		<div>
+		<div class="nametitle">Developers Team</div> 
+		
+		<div>
+			<img src="../images/aboutus/groupphoto.jpeg" width="65%" height="65%" style="display:block;margin-left:auto; margin-right:auto;widith:50%;">
+		</div>
+		<br />
+		<div style="padding-left: 20%; font-size:0.75em;"> 
+			<div class="people">
+			<img src="../images/aboutus/marcus.jpg"/>
+			<p>Director: Marcus Toh</p>
+			</div>
+			
+			<div class="people">
+			<img src="../images/aboutus/ian.jpg"/>
+			<p>Logistics: Ian Sim</p> 
+			</div>
+			
+			<div class="people">
+			<img src="../images/aboutus/toby.jpg"/>
+			<p>Package Delivery Manager: Toby Chua</p>
+			</div>
+			
+			<div class="people">
+			<img src="../images/aboutus/nadya.jpg"/>
+			<p>Administration: Nadya Lee</p>
+			</div>
+			
+			<div class="people">
+			<img src="../images/aboutus/jabez.jpg"/>
+			<p>Customer Satisfactory Manager: Jabez Thian</p>
+			</div>
+		</div> 
+		</div>
+	<br />
+	<div class="footer">
+		<div class="footlogo">	
+		<img src="../images/imgout/logowtag.svg" onerror="this.onerror=null; this.src='../images/imgout/logowtag.png'">
+		</div>
+		<div class="footlinks">
+		<ul>
+		<li class="foottitle">Useful Links</li>
+		<li><a href="../pages/feedform.html" class="footlink" aria-label="Feedback Form">Feedback Us</a></li>
+		<li><a href="../pages/contactus.html" class="footlink"aria-label="Contact Us">Contact Us</a></li>
+		<li><a href="../pages/FAQ.html" class="footlink" aria-label="Frequently Asked Questions">Frequently Asked Questions</a></li>	
+		<li><a href="../pages/terms.html" class="footlink" aria-label="Terms of Use">Terms Of Use</a></li>	
+		</ul>
+		</div>
+		<div class="footlinks">
+		<ul>
+		<li class="foottitle">Follow Us</li>
+		<li><label for="grumblelink"><img src="../images/imgout/social/grumble.png"></label>
+		<a href="#" id="grumblelink" class="footlink">Follow Us on Grumble</a></li>
+		<li class="footlink"><label for="picrulink"><img src="../images/imgout/social/picru.png"></label>
+		<a href="#" id="picrulink" class="footlink">Follow Us on Picru</a></li>
+		<li class="footlink"><label for="mininilink"><img src="../images/imgout/social/mimini.png"></label>
+		<a href="#" id="mimini" class="footlink">Follow Us on Mimini</a></li>
+		</ul>
+		</div>
+	</div>
+	<span class="cpright">
+		<img src="../images/imgout/logo.svg" onerror="this.onerror=null; this.src='../images/imgout/logo.png'">
+		<span>All Rights Reserved.</span>
+	</span>
 	<!-- Prevents Scrolling of Content when menu is opened -->
 	</div>
 	<script>
@@ -83,20 +151,20 @@
 	if (currentTheme) {
 	document.documentElement.setAttribute('data-theme', currentTheme);
 
-	if (currentTheme === 'light') {
+	if (currentTheme === 'dark') {
 	toggleSwitch.checked = true;
 	}
 	}
 
 	function switchTheme(e) {
 	if (e.target.checked) {
-	document.documentElement.setAttribute('data-theme', 'light');
-	localStorage.setItem('theme', 'light');
+	document.documentElement.setAttribute('data-theme', 'dark');
+	localStorage.setItem('theme', 'dark');
 	}
     
 	else {
-	document.documentElement.setAttribute('data-theme', 'dark');
-	localStorage.setItem('theme', 'dark');
+	document.documentElement.setAttribute('data-theme', 'light');
+	localStorage.setItem('theme', 'light');
 	}
 	}
 
